@@ -1,0 +1,55 @@
+body {
+	margin: 0px;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+.main {
+	height: 700px;
+	background-image: url(92340026.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#container {
+	height: 700px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.header {
+	margin-top: 0px;
+	width: 100%;
+}
+
+.logo {
+	float: left;
+	margin-top 10px;
+}
+
+nav {
+	float: right;
+	margin-top: 26px;
+}
+
+.navbar {
+	color: #fff;
+	font-size: 20px;
+	margin-left: 25px;
+	text-decoration: none;
+}
+
+.navbar:hover {
+	text-decoration: underline;
+}
+
+span {
+	width: 100%;
+}
+
+h1 {
+	font-size: 00px;
+	color: #fff;
+	text-align: center;
+	clear: both;
+}
