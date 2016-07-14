@@ -5,19 +5,15 @@ body {
 }
 
 footer {
-	position: fixed;
-	left: 580px;
-	bottom: 0px;
-	height: 30px;
-	width:100%;
+	position: absolute;
+    text-align: center;
+    bottom: 30px;
 }
 
 nav {
-	position: fixed;
-	left: 430px;
-	bottom: 0px;
-	top: 20px;
-	height: 700px;
+	position: absolute;
+	text-align: center;
+	top: 30px;
 }
 
 nav li {
