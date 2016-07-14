@@ -4,21 +4,11 @@ body {
 	color: white;
 }
 
-#logo {
-    position: absolute;
-    margin: auto;
-    left: 0; 
-    right: 0;
-    top: 0;
-    bottom: 25px;
-    height: 50%;
-}
-
 footer {
 	position: fixed;
-	left: 557px;
+	left: 580px;
 	bottom: 0px;
-	height: 45px;
+	height: 30px;
 	width:100%;
 }
 
@@ -37,4 +27,15 @@ nav li {
 	justify-content: center;
 }
 
+h1 {
+    position: fixed;
+    margin-top: 150px;
+    left: 565px;
+}
+
+#text {
+	position:fixed;
+	margin-top: 220px;
+	left: 610px;
+}
 
