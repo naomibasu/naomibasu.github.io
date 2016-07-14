@@ -1,19 +1,7 @@
 body {
-	font-family: Helvetica;
-	color: black;
-}
-
-.main {
-	height: 1000px;
-	background-image: url(https://67.media.tumblr.com/ee64fd17014edc7cf35269dd951157f8/tumblr_oab121isl41qi9kono1_1280.jpg);
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-h1 {
-	font-size: 50px;
-	text-align: center;
+	font-family: "Calibri";
+	background-color: #b8d5fd;
+	color: white;
 }
 
 nav {
