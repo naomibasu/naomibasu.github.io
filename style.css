@@ -6,12 +6,13 @@ body {
 
 #logo {
     position: absolute;
+    display: block;
     margin: auto;
     left: 0; 
     right: 0;
     top: 0;
-    bottom: 25px;
-    height: 50%;
+    bottom: 65px;
+    height: 45%;
 }
 
 footer {
@@ -25,6 +26,7 @@ nav {
 	position: absolute;
 	text-align: center;
 	top: 23px;
+	right: 25px;
 	width: 100%;
 }
 
@@ -33,5 +35,6 @@ nav li {
 	margin: 20px;
 	justify-content: center;
 }
+
 
 
