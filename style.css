@@ -19,6 +19,7 @@ footer {
 	position: absolute;
     text-align: center;
     bottom: 30px;
+    left: 3px;
     width: 100%;
 }
 
@@ -34,6 +35,17 @@ nav li {
 	display: inline;
 	margin: 20px;
 	justify-content: center;
+}
+
+.fade {
+   opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .15s ease-in-out;
+   -webkit-transition: opacity .15s ease-in-out;
+}
+
+.fade:hover {
+  opacity: 0.5;
 }
 
 
