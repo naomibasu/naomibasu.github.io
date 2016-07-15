@@ -8,30 +8,33 @@ footer {
 	position: absolute;
     text-align: center;
     bottom: 30px;
+    width: 100%;
 }
 
 nav {
 	position: absolute;
 	text-align: center;
-	top: 30px;
+	top: 23px;
+	width: 100%;
 }
 
 nav li {
 	display: inline;
 	margin: 20px;
-	text-align: center;
 	justify-content: center;
 }
 
 h1 {
-    position: fixed;
+    position: absolute;
+    text-align: center;
     margin-top: 150px;
-    left: 565px;
+    width: 100%;
 }
 
 #text {
-	position:fixed;
-	margin-top: 220px;
-	left: 610px;
+	position:absolute;
+	text-align: center;
+	margin-top: 200px;
+	width: 100%;
 }
 
