@@ -1,12 +1,12 @@
 body {
   font-family: "Calibri";
-  background-color: #b8d5fd;
-  color: white;
+  background-color: white;
+  color: #6b6b6b;
 }
 
 footer {
   position: relative;
-  bottom: 5%;
+  bottom: 6%;
   width: 100%;
   font-size: 0.7em;
   text-align: center;
@@ -64,7 +64,6 @@ h1 {
   width: auto; 
   max-width: 600px;
   max-height: 600px;
-  border: 12.5px solid white; 
   margin-bottom: 5%;
 }
 

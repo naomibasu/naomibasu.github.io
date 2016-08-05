@@ -1,12 +1,12 @@
 body {
 	font-family: "Calibri";
-	background-color: #b8d5fd;
-	color: white;
+	background-color: white;
+	color: #6b6b6b;
 }
 
 footer {
 	display: block;
-	margin-top: 17%;
+	margin-top: 16%;
 	width: 100%;
 	font-size: 0.7em;
 	text-align: center;
@@ -16,7 +16,7 @@ nav {
 	position: relative;
 	text-align: center;
 	top: 23px;
-	right: 20px;
+	right: 27px;
 	width: 100%;
 	margin-bottom: 5%;
 }
