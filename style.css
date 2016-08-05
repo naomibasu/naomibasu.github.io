@@ -58,7 +58,7 @@ footer {
   height: 40px;
   width: 40px;
   bottom: 233px;
-  right: 5.5px;
+  right: 7px;
 }
 
 #linkedin {
@@ -68,7 +68,6 @@ footer {
   width: 40px;
   left: 142px;
   bottom: 132px;
-
 }
 
 #github {
@@ -77,8 +76,6 @@ footer {
   height: 40px;
   width: 40px;
   bottom: 31px;
-
-
 }
 
 .fade {
