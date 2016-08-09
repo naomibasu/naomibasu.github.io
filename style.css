@@ -27,7 +27,12 @@ footer {
   text-align: center;
 }
 
+@keyframes fdsseq {
+  100% {opacity: 1;}
+}
+
 .container {
+  animation: fdsseq .5s forwards;
   position: relative;
   display: block;
   width: 20%;
@@ -36,7 +41,9 @@ footer {
   margin-top: 19vh;
 }
 
+
 #logo {
+  animation-delay: .5s;
   position: relative;
   height: 190px;
   width: 190px;
@@ -44,6 +51,7 @@ footer {
 }
 
 #about {
+  animation-delay: 1s;
   position: relative;
   display: block;
   height: 40px;
@@ -53,6 +61,7 @@ footer {
 }
 
 #camera {
+  animation-delay: 1.5s;
   position: relative;
   display: block;
   height: 40px;
@@ -62,6 +71,7 @@ footer {
 }
 
 #linkedin {
+  animation-delay: 2s;
   position: relative;
   display: block;
   height: 40px;
@@ -71,6 +81,7 @@ footer {
 }
 
 #github {
+  animation-delay: 2.5s;
   position: relative;
   display: block;
   height: 40px;
