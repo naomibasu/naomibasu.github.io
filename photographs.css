@@ -14,19 +14,25 @@ footer {
   text-align: center;
 }
 
-nav {
-  position: fixed;
-  height: 100px;
-  top: 11%;
-  right: 43%;
-  width: 100%;
+ul {
+  padding-left: 0;
+  text-align: center;
+  margin-left: 10px;
   margin-right: 10px;
 }
 
+nav {
+  position: fixed;
+  height: 100px;
+  top: 16%;
+  width: 100%;
+  right: 43%;
+}
+
 nav li {
-  display: inline;
+  display: block;
   text-align: center;
-  margin: 20px;
+  margin: 40px;
 }
 
 .fade {
@@ -54,27 +60,56 @@ h1 {
   width: 100%;
 }
 
+#photos a {
+  font-size: 16px; 
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin: 8px;
+
+}
+
+#photos a:nth-of-type(2n) {
+  margin-right: 0px;
+}
+
+@media screen and (min-width: 50em) {
+  #photos a {
+    width: calc(29% - 6px);
+  }
+
+  #photos a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  #photos a:nth-of-type(4n) {
+    margin-right: 0px;
+  }
+}
+
 #photos {
   margin-top: 3%;
-  margin-left: 5%;
+  margin-left: 15.5%;
   margin-bottom: 5%;
   justify-content: center;
-  text-align: center;
 }
 
 .photo {
   height: auto; 
   width: auto; 
-  max-width: 600px;
-  max-height: 600px;
+  max-height: 190px;
   margin-bottom: 5%;
 }
 
+/*
 a {
   font-size: 16px; 
   display: block;
   margin-right: 8px;
   margin-bottom: 30px;
 }
+*/
+
+
 
 
