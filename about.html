@@ -5,8 +5,22 @@
   	<meta charset = "utf-8">
   	<meta name = "viewport" content = "width=device-width" initial-scale="1">
   	<link rel="stylesheet" type="text/css" href="about.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <head>
   <body>
+    <script>
+      $(function() {
+        $(document).ready(function() {
+          $("nav").hide().fadeIn(1000);
+          $("h1").hide().delay(100).fadeIn(1000);
+          $("#p1").hide().delay(200).fadeIn(1000);
+          $("#p2").hide().delay(300).fadeIn(1000);
+          $("#contact").hide().delay(400).fadeIn(1000);
+          $("footer").hide().delay(600).fadeIn(1000);
+        });
+      })(jQuery);
+    </script>
+
   	<div class="main">
       <nav>
         <ul>
@@ -20,16 +34,6 @@
 
       <h1>A B O U T</h1>
       
-      <!--
-      <div class="container">
-        <img class="wb" id="schiele" src="wbpages/schiele.png"/>
-        <img class="wb" id="portrait" src="wbpages/portrait.png"/>
-        <img class="wb" id="selfsketch" src="wbpages/selfsketch.png"/>
-        <img class="wb" id="selfdecay" src="wbpages/selfdecay.png"/>
-        <img class="wb" id="warhol" src="wbpages/warhol.png"/>
-        <img class="wb" id="selfwarhol" src="wbpages/selfwarhol.png"/>
-      </div>
-      -->
 
       <p id="p1">My name is Naomi Basu and I’m a Computer Science student at Columbia University in New York. You can check out some of the software projects I have been working on <a href="https://github.com/naomibasu">my GitHub</a>.</p>
       

@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
   	<title>Naomi Basu</title>
   	<meta charset = "utf-8">
   	<meta name = "viewport" content = "width=device-width" initial-scale="1">
   	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- <script src="my_jquery.js"></script> -->
   <head>
+
   <body>
+    <script>
+      $(function() {
+        $(document).ready(function() {
+          $("#logo").hide().fadeIn(1000);
+          $("#about").hide().delay(300).fadeIn(500);
+          $("#camera").hide().delay(600).fadeIn(500);
+          $("#linkedin").hide().delay(900).fadeIn(500);
+          $("#github").hide().delay(1200).fadeIn(500);
+          $("footer").hide().delay(1500).fadeIn(500);
+        });
+      })(jQuery);
+    </script>
+
   	<div class="main">
       <center>
         <div class="container">
-
           <img id="logo" src="logo.png"/>
           <a id="about" href="about.html"><img class="fade" "fadeMe" src="icons/about.png"/></a>
           <a id="camera" href="photographs.html"><img class="fade" "fadeMe" src="icons/camera.png"/></a>
-          <a id="linkedin" href="https://www.linkedin.com/in/naomibasu?trk=nav_responsive_tab_profile_pic"><img class="fade" "fadeMe" src="icons/linkedin.png"/></a>
+          <a id="linkedin" href="https://www.linkedin.com/in/naomibasu"><img class="fade" "fadeMe" src="icons/linkedin.png"/></a>
           <a id="github" href="https://github.com/naomibasu"><img class="fade" "fadeMe" src="icons/github.png"/></a>
         </div>
       </center>
