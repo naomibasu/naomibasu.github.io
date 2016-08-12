@@ -24,15 +24,15 @@ ul {
 nav {
   position: fixed;
   height: 100px;
-  top: 16%;
-  width: 100%;
-  right: 43%;
+  top: 14.5%;
+  width: 20%;
+  left: -1.75%;
 }
 
 nav li {
   display: block;
   text-align: center;
-  margin: 40px;
+  margin: 45px;
 }
 
 .fade {
