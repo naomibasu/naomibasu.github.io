@@ -26,8 +26,8 @@ nav {
   height: 100px;
   top: 14.5%;
   width: 20%;
-  left: -1.75%;
-  margin-right: 20px;
+  left: -3%;
+
 }
 
 nav li {
@@ -54,54 +54,67 @@ h1 {
     width: 100%;
 }
 
-#photos a {
-  font-size: 16px; 
-  display: inline-block;
-  margin-bottom: 8px;
-  width: calc(50% - 4px);
-  margin: 8px;
-}
-
-#photos a:nth-of-type(2n) {
-  margin-right: 0px;
-}
-
-@media screen and (min-width: 50em) {
-  #photos a {
-    width: calc(29% - 6px);
-  }
-
-  #photos a:nth-of-type(2n) {
-    margin-right: 8px;
-  }
-
-  #photos a:nth-of-type(4n) {
-    margin-right: 0px;
+@media (max-width: 3000px) {
+  #photos {
+    /* Prevent vertical gaps */
+    width: 77%;
+    line-height: 5;
+    margin-left: 15%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+     
+    -webkit-column-count: 3;
+    -webkit-column-gap:   2px;
+    -moz-column-count:    3;
+    -moz-column-gap:      2px;
+    column-count:         3;
+    column-gap:           2px;  
   }
 }
 
-#photos {
-  margin-top: 3%;
-  margin-left: 16%;
-  margin-bottom: 5%;
-  justify-content: center;
+@media (max-width: 900px) {
+  #photos {
+    /* Prevent vertical gaps */
+    width: 77%;
+    line-height: 5;
+    margin-left: 16%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+     
+    -webkit-column-count: 2;
+    -webkit-column-gap:   2px;
+    -moz-column-count:    2;
+    -moz-column-gap:      2px;
+    column-count:         2;
+    column-gap:           2px;  
+  }
 }
+
+@media (max-width: 600px) {
+  #photos {
+    /* Prevent vertical gaps */
+    width: 77%;
+    line-height: 5;
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+     
+    -webkit-column-count: 1;
+    -webkit-column-gap:   2px;
+    -moz-column-count:    1;
+    -moz-column-gap:      2px;
+    column-count:         1;
+    column-gap:           2px;  
+  }
+}
+
 
 .photo {
-  height: auto; 
-  max-width: 100%;
-  max-height: 190px;
-  margin-bottom: 5%;
+  /* Just in case there are inline attributes */
+  width: 100% !important;
+  height: auto !important;
 }
 
-/*
-a {
-  font-size: 16px; 
-  display: block;
-  margin-right: 8px;
-  margin-bottom: 30px;
-}
-*/
 
 
 
