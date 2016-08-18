@@ -1,15 +1,23 @@
-body {
-  width: 100%;
+html {
   height: 100%;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100%;  
+  width: 100%;
   font-family: "Calibri";
   background-color: white;
   color: #6b6b6b;
 }
 
-footer {
-  position: relative;
-  bottom: 6%;
-  width: 100%;
+.footer {
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  padding: 1rem;
   font-size: 0.7em;
   text-align: center;
 }
@@ -18,7 +26,6 @@ ul {
   padding-left: 0;
   text-align: center;
   margin-left: 10px;
-  
 }
 
 nav {
@@ -27,7 +34,6 @@ nav {
   top: 14.5%;
   width: 20%;
   left: -3%;
-
 }
 
 nav li {
@@ -47,72 +53,11 @@ nav li {
   opacity: 0.5;
 }
 
-h1 {
-    position: absolute;
-    text-align: center;
-    margin-top: 150px;
-    width: 100%;
-}
-
-@media (max-width: 3000px) {
-  #photos {
-    /* Prevent vertical gaps */
-    width: 77%;
-    line-height: 5;
-    margin-left: 15%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-     
-    -webkit-column-count: 3;
-    -webkit-column-gap:   2px;
-    -moz-column-count:    3;
-    -moz-column-gap:      2px;
-    column-count:         3;
-    column-gap:           2px;  
-  }
-}
-
-@media (max-width: 900px) {
-  #photos {
-    /* Prevent vertical gaps */
-    width: 77%;
-    line-height: 5;
-    margin-left: 16%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-     
-    -webkit-column-count: 2;
-    -webkit-column-gap:   2px;
-    -moz-column-count:    2;
-    -moz-column-gap:      2px;
-    column-count:         2;
-    column-gap:           2px;  
-  }
-}
-
-@media (max-width: 600px) {
-  #photos {
-    /* Prevent vertical gaps */
-    width: 77%;
-    line-height: 5;
-    margin-left: 20%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-     
-    -webkit-column-count: 1;
-    -webkit-column-gap:   2px;
-    -moz-column-count:    1;
-    -moz-column-gap:      2px;
-    column-count:         1;
-    column-gap:           2px;  
-  }
-}
-
-
-.photo {
-  /* Just in case there are inline attributes */
-  width: 100% !important;
-  height: auto !important;
+.block {
+  margin-left: 13.5%;
+  position: absolute;
+  padding: 20px;
+  width: 260px;
 }
 
 

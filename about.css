@@ -54,6 +54,11 @@ h1 {
 	max-height: 170px;
 }
 
+p a {
+	color: #6b6b6b;
+}
+
+
 #p1 {
 	position:relative;
 	text-align: center;
