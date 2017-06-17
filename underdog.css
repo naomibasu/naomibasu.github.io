@@ -54,12 +54,45 @@ nav li {
   opacity: 0.5;
 }
 
-.block {
-  margin-left: 13.5%;
-  position: absolute;
-  padding: 20px;
-  width: 260px;
+
+.container {
+  position: relative;
+  width: auto;
+  text-align: center;
+  margin-top: 13%;
 }
+
+h1 {
+  text-align: center;
+  margin-top: 10vh;
+  white-space: pre;
+}
+
+#p1 {
+  position:relative;
+  text-align: center;
+  margin-top: 3.5%;
+  margin-left: 30%;
+  margin-bottom: 2%;
+  width: 40%;
+  word-spacing: 2.5px;
+  font-size: 0.95em;
+}
+
+#p2 {
+  position:relative;
+  text-align: center;
+  margin-left: 30%;
+  margin-bottom: 5%;
+  width: 40%;
+  word-spacing: 2.5px;
+  font-size: 0.95em;
+}
+
+#underdog {
+  height: 10%;
+}
+
 
 
 

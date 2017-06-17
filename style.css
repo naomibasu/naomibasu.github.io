@@ -21,6 +21,7 @@ footer {
   bottom: -197px;
   width: 100%;
   font-size: 0.7em;
+  white-space: pre;
 }
 
 .center {
