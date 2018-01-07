@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Social VR Force Fields</title>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width" initial-scale="1">
+    <link rel="stylesheet" type="text/css" href="sketchar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="my_jquery.js"></script>
+  <head>
+  <body onload="setupBlocks();">
+    <script>
+      $(function() {
+        $(document).ready(function() {
+          $("#about").hide().fadeIn(500);
+          $("#camera").hide().delay(200).fadeIn(500);
+          $("#logo").hide().delay(400).fadeIn(500);
+          $("#linkedin").hide().delay(600).fadeIn(500);
+          $("#project").hide().delay(800).fadeIn(500);
+          $(".block").hide().delay(850).fadeIn(600)
+          //$("footer").hide().delay(1200).fadeIn(500);
+        });
+      })(jQuery);
+    </script>
+
+    <nav>
+      <ul>
+        <li><a id="about" href="about.html"><img class="fade" src="icons/about.png" title="About"/></a></li>
+        <li><a id="art" href="art.html"><img class="fade" src="icons/art.png" title="Art"/></a></li>
+        <li><a id="logo" href="index.html"><img class="fade" src="icons/logoicon.png"/></a></li>
+        <li><a id="linkedin" href="https://www.linkedin.com/in/naomibasu?trk=nav_responsive_tab_profile_pic"><img class="fade" src="icons/linkedin.png"/></a></li>
+        <li><a id="project" href="project.html"><img class="fade" src="icons/project.png"/></a></li>
+      </ul>
+    </nav>
+
+
+    <div class="main">
+
+      <h1>Social VR Force Fields</h1>
+
+      <p id="p1">
+        Due to the immersive nature of Virtual Reality, online harassment in social VR apps like Rec Room can feel quite real. Consequently, people who run into bad experiences with other users on these apps can be discouraged from using VR altogether.
+      </p>
+
+      <p id="p1">
+        As an intern in Google Daydream Labs, my goal was to conceptualize and implement several types of "force fields" (varying in practicality and playfulness) that prevented other users from invading your personal space, thus reducing possibilities for harassment. 
+      </p>
+      
+      <p id="p2">
+        <img class="block fade" src="epgifs/fade.gif" 
+          title="fade" alt="">
+        <img class="block fade" src="epgifs/fall.gif" 
+          title="fall" alt="">
+        <img class="block fade" src="epgifs/freeze.gif" 
+          title="freeze" alt="">
+        <img class="block fade" src="epgifs/spring.gif" 
+          title="spring" alt="">
+      </p>
+   
+
+    </div>
+      
+
+
+    <div class="footer"><p>N A O M I   B A S U   2 0 1 6</p></div> 
+  </body> 
+</html>

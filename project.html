@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+2<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Projects</title>
+    <title>Creative Projects</title>
     <meta charset = "utf-8">
     <meta name = "viewport" content = "width=device-width" initial-scale="1">
     <link rel="stylesheet" type="text/css" href="project.css">
@@ -47,11 +47,11 @@
 
         function setupBlocks() {
           windowWidth = $(window).width();
-          //colWidth = $('.block').outerWidth();
-          colWidth = Math.floor(windowWidth/3); // REPLACE WITH 1st LINE AFTER ADDING MORE PROJECTS
+          colWidth = $('.block').outerWidth();
+          // colWidth = Math.floor(windowWidth/3);
           blocks = [];
           console.log(blocks);
-          colCount = Math.floor(windowWidth/(colWidth+margin) * 2);
+          colCount = Math.floor(windowWidth/(colWidth+margin*2));
           for(var i=0;i<colCount;i++){
             blocks.push(margin);
           }
@@ -80,6 +80,20 @@
 
       <h1>C R E A T I V E    P R O J E C T S</h1>
 
+      <a href="earthwiki.html">
+        <figure>
+          <img class="block fade" src="epgifs/earthWiki.gif" 
+          title="VR Earth Wikipedia" alt="">
+          <!--<figcaption>VR Earth Wikipedia </figcaption>-->
+        </figure>
+      </a>
+      <a href="forcefield.html">
+        <figure>
+          <img class="block fade" src="epgifs/fade.gif" 
+          title="Social VR Force Fields" alt="">
+          <!--<figcaption>Social VR Force Fields </figcaption>-->
+        </figure>
+      </a>
       <a href="underdog.html">
         <figure>
           <img class="block fade" src="photos/underdog1.jpg" 
