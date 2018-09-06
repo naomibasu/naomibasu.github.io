@@ -40,11 +40,9 @@
         var margin = 30;
         var windowWidth = 0;
         var blocks = [];
-
         $(function(){
           $(window).resize(setupBlocks);
         });
-
         function setupBlocks() {
           windowWidth = $(window).width();
           colWidth = $('.block').outerWidth();
@@ -56,7 +54,6 @@
           }
           positionBlocks();
         }
-
         function positionBlocks() {
           $('.block').each(function(){
             var min = Array.min(blocks);
@@ -69,12 +66,10 @@
             blocks[index] = min+$(this).outerHeight()+margin;
           }); 
         }
-
         // Function to get the Min value in Array
         Array.min = function(array) {
             return Math.min.apply(Math, array);
         };
-
       </script>
       <a href="photos/glass.jpg">
         <figure>
