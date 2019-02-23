@@ -95,9 +95,23 @@ iframe {
   left: 200px;
 }
 
+.column {
+  float: right;
+  text-align: center;
+  width: 38%;
+  padding: 5%;
+}
 
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
-
-
+p .caption {
+  text-align: center;
+  width: 20%;
+  font-size: 0.6em;
+}
 
 

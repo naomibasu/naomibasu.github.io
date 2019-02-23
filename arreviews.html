@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AR Reviews</title>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width" initial-scale="1">
+    <link rel="stylesheet" type="text/css" href="sketchar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="my_jquery.js"></script>
+  <head>
+  <body onload="setupBlocks();">
+    <script>
+      $(function() {
+        $(document).ready(function() {
+          $("#about").hide().fadeIn(500);
+          $("#camera").hide().delay(200).fadeIn(500);
+          $("#logo").hide().delay(400).fadeIn(500);
+          $("#linkedin").hide().delay(600).fadeIn(500);
+          $("#project").hide().delay(800).fadeIn(500);
+          $(".block").hide().delay(850).fadeIn(600)
+          //$("footer").hide().delay(1200).fadeIn(500);
+        });
+      })(jQuery);
+    </script>
+
+    <nav>
+      <ul>
+        <li><a id="about" href="about.html"><img class="fade" src="icons/about.png" title="About"/></a></li>
+        <li><a id="art" href="art.html"><img class="fade" src="icons/art.png" title="Art"/></a></li>
+        <li><a id="logo" href="index.html"><img class="fade" src="icons/logoicon.png"/></a></li>
+        <li><a id="linkedin" href="https://www.linkedin.com/in/naomibasu?trk=nav_responsive_tab_profile_pic"><img class="fade" src="icons/linkedin.png"/></a></li>
+        <li><a id="project" href="project.html"><img class="fade" src="icons/project.png"/></a></li>
+      </ul>
+    </nav>
+
+
+    <div class="main">
+
+      <h1>AR Reviews</h1>
+      
+      <p id="p1">
+        As an intern in Google's GeoAR Experiences team, I used Unity to build an Augmented Reality prototype for users to quickly create and discover business reviews on-the-go. My goal was to make review creation/discovery a more seamless and delightful experience.
+      </p>
+
+      <div class="row">
+        <div class="column">
+          <p class="caption"></p>
+          <img class="fade" src="epgifs/creation.gif" 
+            title="AR Review Creation" width="50%" alt="">          
+          <p>
+            Leaving an (emoji-represented) review in front of the Big Mouth restaurant in SF:
+          </p>
+        </div>
+        <div class="column"> 
+          <p class="caption"></p>
+          <img class="fade" src="epgifs/discovery.gif" 
+            title="AR Review Discovery" width="50%" alt="">
+          <p>
+            Discovering reviews in NYC's Chelsea neighborhood:
+          </p>  
+        </div>               
+      </div>
+
+<!--       <p id="p1">
+        Leaving an (emoji-represented) review in front of the Big Mouth restaurant in SF:
+      </p>
+      
+      <p id="p2">
+        <img class="fade" src="epgifs/creation.gif" 
+          title="AR Review Creation" width="50%" alt="">
+      </p>
+
+      <p id="p1">
+        Discovering reviews in NYC's Chelsea neighborhood:
+      </p>      
+      <p id="p2">
+        <img class="fade" src="epgifs/discovery.gif" 
+          title="AR Review Discovery" width="50%" alt="">
+      </p> -->
+
+    </div>
+      
+
+
+    <div class="footer"><p>N A O M I   B A S U   2 0 1 6</p></div> 
+  </body> 
+</html>
