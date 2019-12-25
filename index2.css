@@ -1,11 +1,7 @@
-html {
-  height: 100%;
-  margin: 0;
-}
 
 body {
   position: relative;
-  min-height: 100%;  
+  height: 100%;
   width: 100%;
   font-family: "Calibri";
   background-color: white;
@@ -30,9 +26,11 @@ ul {
 }
 
 nav {
+  display: inline-block;
   position: fixed;
+  float: left;
   height: 100px;
-  top: 14.5%;
+  top: 13%;
   width: 20%;
   left: -3%;
 }
@@ -57,7 +55,7 @@ nav li {
 .block {
   /* margin-left: 13.5%; */
   margin-left:18%;
-  margin-top: 12%;
+  margin-top: 5%;
   position: absolute;
   padding: 10px;
   width: 260px;
@@ -65,9 +63,17 @@ nav li {
 
 h1 {
   text-align: center;
-  margin-top: 10vh;
+  /*margin-top: 10vh;*/
   white-space: pre;
+}
 
+#content {
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+  float: left;
+/*  margin-left: 20%;*/
+  /*margin-top: 7%;*/
 }
 
 
