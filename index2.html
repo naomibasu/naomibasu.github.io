@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Projects</title>
+<!--     <title>Projects</title> -->
     <meta charset = "utf-8">
     <meta name = "viewport" content = "width=device-width" initial-scale="1">
     <link rel="stylesheet" type="text/css" href="index2.css">
@@ -14,47 +14,53 @@
         <li><a id="art" onclick="load_art()"><img class="fade" src="icons/art.png" title="Art"/></a></li>
         <li><a id="logo" href="index.html"><img class="fade" src="icons/logoicon.png"/></a></li>
         <li><a id="linkedin" href="https://www.linkedin.com/in/naomibasu?trk=nav_responsive_tab_profile_pic"><img class="fade" src="icons/linkedin.png"/></a></li>
-        <li><a id="project" onclick="load_projects()"><img class="fade" src="icons/project.png"/></a></li>
+        <li><a id="project" onclick="load_projects()"><img class="fade" src="icons/project.png" title="Projects"/></a></li>
       </ul>
     </nav>
 
     <script>
-	  $(function() {
-	  	// Set up side icons
-	    jQuery(document).ready(function() {
+		  $(function() {
+		  	// Set up side icons
 	      $("#about").hide().fadeIn(500);
 	      $("#art").hide().delay(200).fadeIn(500);
 	      $("#logo").hide().delay(400).fadeIn(500);
 	      $("#linkedin").hide().delay(600).fadeIn(500);
 	      $("#project").hide().delay(800).fadeIn(500);
 	      $(".block").hide().delay(850).fadeIn(600)
-	      //$("footer").hide().delay(1200).fadeIn(500);
-	    });
-	  });
+	      //$("footer").hide().delay(1200).fadeIn(500);	     		    
+		  });	
+
+ 			// Create image links
+ 			var art_names = ['photos/glass.jpg', 'photos/pops.jpg', 'photos/selfportrait.jpg', 'photos/pops_dinner.jpg', 'photos/whit.jpg', 'photos/ma.jpeg', 'photos/smoke.jpg', 'photos/moike.jpg'];
+
+ 			// Create project image links
+ 			var project_names = ['load_earth()', 'load_forcefield()', 'load_underdog()', 'load_sketchar()'];
+ 			var project_dict = {
+ 				'load_earth()': 'epgifs/earthWiki.gif',
+ 				'load_forcefield()': 'epgifs/fade.gif',
+ 				'load_underdog()': 'photos/underdog1.jpg',
+ 				'load_sketchar()': 'photos/sketchAR.gif'
+ 			};
+
+	    $(window).resize(setupBlocks); 
 
 	  	// Set up block columns
 	    var colCount = 0;
 	    var colWidth = 0;
 	    var margin = 30;
 	    var windowWidth = 0;
-	    var blocks = [];
-
-	    $(function(){
-	      $(window).resize(setupBlocks);
-	    });
+	    var blocks = [];  
 
 	    function setupBlocks() {
-	      // windowWidth = $(window).width();
-	      windowWidth = $('#content').width();
+	      windowWidth = $(window).width();
 	      colWidth = $('.block').outerWidth();
 	      // colWidth = Math.floor(windowWidth/3);
 	      blocks = [];
-	      colCount = Math.floor(windowWidth/(colWidth+margin*2));
-	      for(var i=0;i<colCount;i++){
+	      colCount = Math.floor(windowWidth/(colWidth+margin*3));
+	      for(var i = 0; i < colCount; i++) {
 	        blocks.push(margin);
 	      }
 	      positionBlocks();
-	      console.log("set up blocks");
 	    }
 
 	    function positionBlocks() {
@@ -66,123 +72,80 @@
 	          'left':leftPos+'px',
 	          'top':min+'px'
 	        });
-	        blocks[index] = min+$(this).outerHeight()+margin;
+	        // blocks[index] = min+$(this).outerHeight()+margin;
+	        blocks[index] = min+$(this).outerHeight(true)+margin;
 	      }); 
 	    }
 
 	    Array.min = function(array) {
-	        return Math.min.apply(Math, array);
+        return Math.min.apply(Math, array);
 	    };
 
-		function removeElement(id) {
-		    var elem = document.getElementById(id);
-		    if (elem != null) {
-		    	return elem.parentNode.removeChild(elem);
-		    }
-		}
+			function removeElements(className) {
+		    var elements = document.getElementsByClassName(className);
+				while(elements[0]) {
+				    elements[0].parentNode.removeChild(elements[0]);
+				}
+			}
 
 	    function load_projects() {
-	 		// Content
-	 		removeElement('content');
-	 		var content = document.createElement('div');
-	 		content.setAttribute("id", "content");
-	 		document.body.appendChild(content);
-	 		setupBlocks();
+	    	removeElements('content');
+		 		// Set title of page
+	 			// var title = document.body.appendChild(document.createElement('h1'));
+	 			// title.setAttribute('class', 'content');
+	 			// title.innerHTML = 'P R O J E C T S';
 
-	 		content.innerHTML = 
-	 			'<h1>P R O J E C T S</h1> \
-	 			<figure onclick="load_earth()"><img class="block fade" src="epgifs/earthWiki.gif"</figure> \
-	 		     <figure onclick="load_forcefield()"><img class="block fade" src="epgifs/fade.gif" title="Social VR Force Fields" alt=""></figure> \
-	 		     <figure onclick="load_underdog()"><img class="block fade" src="photos/underdog1.jpg" title="The Underdog And Other Stories" alt=""></figure> \
-	 		     <figure onclick="load_sketchar()"><img class="block fade" src="photos/sketchAR.gif"title="SketchAR" alt=""></figure>';
-	 		
-		}	
+	 			for (const element of project_names) {
+		 			var project = document.body.appendChild(document.createElement('figure'));
+		 			project.setAttribute('onclick', element);
+		 			project.setAttribute('class', 'content');
+		 			var image = project.appendChild(document.createElement('img'));
+		 			image.setAttribute('class', 'block fade');
+		 			image.setAttribute('src', project_dict[element]);
+	 			}
+	 			setTimeout(setupBlocks, 1000);
+			}	
 
 	    function load_art() {
-	 		// Content
-	 		removeElement('content');
-	 		var content = document.createElement('div');
-	 		content.setAttribute("id", "content");
-	 		document.body.appendChild(content);
-	 		setupBlocks();
+	    	removeElements('content');
 
-	 		content.innerHTML = 
-		      '<a href="photos/glass.jpg"><figure><img class="block fade" src="photos/glass.jpg" alt=""></figure></a> \
-		      <a href="photos/pops.jpg"><figure><img class="block fade" src="photos/pops.jpg" alt=""></figure></a> \
-		      <a href="photos/selfportrait.jpg"><figure><img class="block fade" src="photos/selfportrait.jpg" alt=""></figure></a> \
-		      <a href="photos/pops_dinner.jpg"><figure><img class="block fade" src="photos/pops_dinner.jpg" alt=""></figure></a> \
-		      <a href="photos/whit.jpg"><figure><img class="block fade" src="photos/whit.jpg" alt=""></figure></a> \
-		      <a href="photos/smoke.jpg"><figure><img class="block fade" src="photos/smoke.jpg" alt=""></figure></a> \
-		      <a href="photos/moike.jpg"><figure><img class="block fade" src="photos/moike.jpg" alt=""></figure></a>' 
-		}	
+	 			for (const element of art_names) {
+	 				var link = document.body.appendChild(document.createElement('a'));
+	 				link.setAttribute('href', element);
+	 				link.setAttribute('class', 'content');
+		 			var figure = link.appendChild(document.createElement('figure'));
+		 			figure.setAttribute('class', 'content');
+		 			var image = figure.appendChild(document.createElement('img'));
+		 			image.setAttribute('class', 'block fade');
+		 			image.setAttribute('src', element);
+	 			}
+	 			setTimeout(setupBlocks, 1000);
+			}	
 
+			// TODO
 	    function load_about() {
-	    	removeElement('content');
-	 		var content = document.createElement('div');
-	 		content.setAttribute("id", "content");
-	 		document.body.appendChild(content);
+	    	removeElements('content');
+			}		
 
-	    	content.innerHTML = 
-	    		'<h1>A B O U T</h1>\
-	    		<br/> <br/> \
-	    		<p>I studied Computer Science at Columbia University and my interests include Computer Animation, AR/VR, art and design. You can check out some of my software projects on <a href="https://github.com/naomibasu">my GitHub</a>.</p> \
-	    		<p>I spend a lot of time drawing and painting. I \'ve included some of my art projects here. </p> \
-	    		<p>If you want to get in contact, drop me an email at <i>naomibasu at gmail.com</i></p>'
-		}		
-
+			// TODO
 	    function load_earth() {
-	    	removeElement('content');
-	 		var content = document.createElement('div');
-	 		content.setAttribute("id", "content");
-	 		document.body.appendChild(content);
+	    	removeElements('content');
+			}	
 
-	    	content.innerHTML = 
-	    		'<h1>VR Earth Wikipedia</h1>\
-	    		<p>As an intern in Google Daydream, I used Unity to build a "Geographic Wikipedia" within EarthVR. This prototype enabled users to learn more about the cities and neighborhoods they explore while immersed in the app.</p> \
-	    		<p>Below is a GIF of a user exploring various neighborhoods in San Francisco.</p> \
-	    		<p><img class="block fade" src="epgifs/earthWiki.gif" title="VR Earth Wikipedia"></p>'
-		}	
-
+			// TODO
 	    function load_forcefield() {
-	    	removeElement('content');
-	 		var content = document.createElement('div');
-	 		content.setAttribute("id", "content");
-	 		document.body.appendChild(content);
+	    	removeElements('content');
+			}		
 
-	    	content.innerHTML = 
-	    		'<h1>VR Earth Wikipedia</h1>\
-	    		<p>Due to the immersive nature of Virtual Reality, online harassment in social VR apps like Rec Room can feel quite intrusive. Consequently, people who have bad experiences with other users on these apps can be discouraged from using VR altogether.</p> \
-	    		<p>As an intern in Google Daydream Labs, my goal was to conceptualize and implement several types of "force fields" that prevented other users from invading your personal space, reducing possibilities for harassment.</p> \
-	    		<p><img class="block fade" src="epgifs/fade.gif" title="fade"> \
-        			<img class="block fade" src="epgifs/fall.gif" title="fall" \
-        			<img class="block fade" src="epgifs/freeze.gif" title="freeze"> \
-        			<img class="block fade" src="epgifs/spring.gif" title="spring"'
-		}		
-
+			// TODO
 	    function load_underdog() {
-	    	removeElement('content');
-	 		var content = document.createElement('div');
-	 		content.setAttribute("id", "content");
-	 		document.body.appendChild(content);
+	    	removeElements('content');
+			}	
 
-	    	content.innerHTML = 
-	    		'<h1>T H E  U N D E R D O G  A N D  O T H E R  S T O R I E S</h1>\
-	    		<p>The Underdog and Other Stories is a collection of three short comics that I made for my youngest cousin on her birthday in April 2017. You can view a pdf version by clicking the image below.</p> \
-	    		<p><a href="underdogpdf.pdf"><img id="underdog" class="fade" src="photos/underdog_link.jpg" title="Underdog"/></a></p>'
-		}	
-
+			// TODO
 	    function load_sketchar() {
-	    	removeElement('content');
-	 		var content = document.createElement('div');
-	 		content.setAttribute("id", "content");
-	 		document.body.appendChild(content);
-
-	    	content.innerHTML = 
-	    	'<h1>S k e t c h A R</h1>\
-	    	<p>SketchAR is a mobile app that allows you to paint in Augmented Reality. It has 4 modes for painting, navigating, saving viewpoints and reading instructions respectively. <br/><br/><br/> It was built with Unity3D and Vuforia, and can be used with a couple of printable A4 image targets and a soda can.</p>'
-			'<p>Watch the Demo Video: <br/> <br/> <iframe width="500" height="280" src="https://www.youtube.com/embed/Q1BBAQAwtrc" frameborder="0" align="middle" allowfullscreen></iframe></p>'	    	
-		}		
-
+	    	removeElements('content'); 	
+			}				  
     </script>
 
     <!-- <div class="footer"><p>N A O M I   B A S U   2 0 1 6</p></div> -->
