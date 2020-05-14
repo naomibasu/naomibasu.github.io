@@ -16,13 +16,13 @@ html, body {
   height: 100%;
 }
 
-footer {
+/* footer {
 	position: relative;
   bottom: -197px;
   width: 100%;
   font-size: 0.7em;
   white-space: pre;
-}
+} */
 
 .center {
   text-align: center;
@@ -71,7 +71,7 @@ footer {
   right: 7px;
 }
 
-#linkedin {
+#instagram {
   animation-delay: 2s;
   position: relative;
   display: block;

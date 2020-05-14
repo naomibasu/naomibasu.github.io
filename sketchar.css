@@ -12,7 +12,7 @@ body {
   color: #6b6b6b;
 }
 
-.footer {
+/* .footer {
   position: absolute;
   bottom: 5vh;
   left: 0;
@@ -21,7 +21,7 @@ body {
   font-size: 0.7em;
   text-align: center;
   white-space: pre;
-}
+} */
 
 ul {
   padding-left: 0;
@@ -107,11 +107,3 @@ iframe {
   clear: both;
   display: table;
 }
-
-p .caption {
-  text-align: center;
-  width: 20%;
-  font-size: 0.6em;
-}
-
-

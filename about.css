@@ -4,14 +4,14 @@ body {
 	color: #6b6b6b;
 }
 
-footer {
+/* footer {
 	display: block;
 	margin-top: 16%;
 	width: 100%;
 	font-size: 0.7em;
 	text-align: center;
 	white-space: pre;
-}
+} */
 
 nav {
 	position: relative;
@@ -39,11 +39,6 @@ nav li {
   opacity: 0.5;
 }
 
-h1 {
-	text-align: center;
-	margin-top: 16vh;
-}
-
 .container {
 	position: relative;
 	width: auto;
@@ -57,28 +52,6 @@ h1 {
 
 p a {
 	color: #6b6b6b;
-}
-
-
-#p1 {
-	position:relative;
-	text-align: center;
-	margin-top: 3.5%;
-	margin-left: 30%;
-	margin-bottom: 2%;
-	width: 40%;
-	word-spacing: 2.5px;
-	font-size: 0.95em;
-}
-
-#p2 {
-	position:relative;
-	text-align: center;
-	margin-left: 30%;
-	margin-bottom: 5%;
-	width: 40%;
-	word-spacing: 2.5px;
-	font-size: 0.95em;
 }
 
 #contact {
