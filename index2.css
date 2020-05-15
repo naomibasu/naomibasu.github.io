@@ -1,0 +1,84 @@
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100%;  
+  width: 100%;
+  font-family: "Calibri";
+  background-color: white;
+  color: #6b6b6b;
+}
+
+/* .footer {
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  font-size: 0.7em;
+  text-align: center;
+  white-space: pre;
+} */
+
+ul {
+  padding-left: 0;
+  text-align: center;
+  margin-left: 10px;
+}
+
+nav {
+  position: fixed;
+  height: 100px;
+  top: 14.5%;
+  width: 20%;
+  left: -3%;
+}
+
+nav li {
+  display: block;
+  text-align: center;
+  margin: 45px;
+}
+
+.fade {
+ opacity: 1;
+ transition: opacity .25s ease-in-out;
+ -moz-transition: opacity .15s ease-in-out;
+ -webkit-transition: opacity .15s ease-in-out;
+}
+
+.fade:hover {
+  opacity: 0.5;
+}
+
+.block {
+  margin-left: 13.5%;
+  position: absolute;
+  padding: 20px;
+  width: 260px;
+}
+
+#content {
+  text-align: center;
+}
+
+p a {
+	color: #6b6b6b;
+}
+
+#contact {
+	position:relative;
+	text-align: center;
+  margin-left: 30%;
+  margin-top: 15%;
+	width: 40%;	
+	word-spacing: 2.5px;
+	font-size: 0.95em;
+}
+
+
+
+

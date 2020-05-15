@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SketchAR</title>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width" initial-scale="1">
+    <link rel="stylesheet" type="text/css" href="sketchar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="my_jquery.js"></script>
+    <script>
+      function setPage(title) {
+        window.localStorage.setItem("requestedPage", title);
+        window.location.href = "../index2.html";
+      }
+    </script>
+  <head>
+  <body>
+    <script>
+      $(function() {
+        $(document).ready(function() {
+          $("#about").hide().fadeIn(500);
+          $("#camera").hide().delay(200).fadeIn(500);
+          $("#logo").hide().delay(400).fadeIn(500);
+          $("#instagram").hide().delay(600).fadeIn(500);
+          $("#project").hide().delay(800).fadeIn(500);
+          $(".block").hide().delay(850).fadeIn(600)
+          //$("footer").hide().delay(1200).fadeIn(500);
+        });
+      })(jQuery);
+    </script>
+
+    <nav>
+      <ul>
+        <li><a class="icon" id="about" onclick="setPage('about')"><img class="fade" src="../icons/about.png"/></a></li>
+        <li><a class="icon" id="art" onclick="setPage('art')"><img class="fade" src="../icons/art.png"/></a></li>
+        <li><a class="icon" id="logo" href="../index.html"><img class="fade" src="../icons/logoicon.png"/></a></li>
+        <li><a class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/"><img class="fade" src="../icons/instagram.png"/></a></li>
+        <li><a class="icon" id="project" onclick="setPage('projects')"><img class="fade" src="../icons/project.png"/></a></li>
+      </ul>
+    </nav>
+
+
+    <div class="main">
+      <h1>S k e t c h A R</h1>
+      
+      <p id="p1">
+        SketchAR is a mobile app that allows you to paint in Augmented Reality.
+        It has 4 modes for painting, navigating, saving viewpoints and reading instructions respectively.
+        <br/><br/><br/>
+        It was built with Unity3D and Vuforia, and can be used with a couple of printable A4 image targets and a soda can.
+      </p>
+      
+      <p id="p2">
+        Watch the Demo Video: <br/> <br/> 
+        <iframe width="500" height="280" src="https://www.youtube.com/embed/Q1BBAQAwtrc" frameborder="0" align="middle" allowfullscreen></iframe>
+      </p>
+    </div>
+
+    <!-- <div class="footer"><p>N A O M I   B A S U   2 0 1 6</p></div>  -->
+  </body> 
+</html>

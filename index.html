@@ -6,6 +6,12 @@
   	<meta name = "viewport" content = "width=device-width" initial-scale="1">
   	<link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+      function setPage(title) {
+        window.localStorage.setItem("requestedPage", title);
+        window.location.href = "index2.html";
+      }
+    </script>
   <head>
 
   <body>
@@ -19,17 +25,17 @@
           $("#project").hide().delay(1200).fadeIn(500);
           // $("footer").hide().delay(1500).fadeIn(500);
         });
-      })(jQuery);
+      });
     </script>
 
   	<div class="main">
       <center>
         <div class="container">
           <img id="logo" src="logo.png"/>
-          <a id="about" href="about.html"><img class="fade" src="icons/about.png"/></a>
-          <a id="art" href="art.html"><img class="fade" src="icons/art.png"/></a>
-          <a id="instagram" href="https://www.instagram.com/naomi.basu/"><img class="fade" src="icons/instagram.png"/></a>
-         <a id="project" href="project.html"><img class="fade" src="icons/project.png"/></a>
+          <a class="icon" id="about" onclick="setPage('about')"><img class="fade" src="icons/about.png"/></a>
+          <a class="icon" id="art" onclick="setPage('art')"><img class="fade" src="icons/art.png"/></a>
+          <a class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/"><img class="fade" src="icons/instagram.png"/></a>
+          <a class="icon" id="project" onclick="setPage('projects')"><img class="fade" src="icons/project.png"/></a>
         </div>
       </center>
       <!-- <center><footer>N A O M I     B A S U     2 0 1 6</footer></center> -->

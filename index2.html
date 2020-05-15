@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title></title>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width" initial-scale="1">
+    <link rel="stylesheet" type="text/css" href="index2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="index2.js"></script>
+  <head>
+
+  <body>
+    <nav>
+		<ul>
+		  <li><a class="icon" id="about" onclick="load_about()"><img class="fade" src="icons/about.png"/></a></li>
+		  <li><a class="icon" id="art" onclick="load_art()"><img class="fade" src="icons/art.png"/></a></li>
+		  <li><a class="icon" id="logo" href="index.html"><img class="fade" src="icons/logoicon.png"/></a></li>
+		  <li><a class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/ " target="_blank"><img class="fade" src="icons/instagram.png"/></a></li>
+		  <li><a class="icon" id="project" onclick="load_projects()"><img class="fade" src="icons/project.png"/></a></li>
+		</ul>
+	</nav>
+
+    <div id="content">
+	    <script>
+			  $(function() {
+			  	// Set up side icons
+				$("#about").hide().fadeIn(500);
+				$("#art").hide().delay(200).fadeIn(500);
+				$("#home").hide().delay(400).fadeIn(500);
+				$("#instagram").hide().delay(600).fadeIn(500);
+				$("#project").hide().delay(800).fadeIn(500);
+				$(".block").hide().delay(850).fadeIn(600)    
+			  });	
+			$(window).resize(setupBlocks); 
+			
+			var requestedPage = "";
+			// Get requestedPage from cookie
+			(function () {
+   		 		requestedPage = window.localStorage.getItem("requestedPage");
+			}(window));
+			 
+			if (requestedPage == 'art') {
+				load_art();
+			}
+			else if (requestedPage == 'projects') {
+				load_projects();
+			}
+			if (requestedPage == 'about') {
+				load_about();
+			}		
+	    </script>    	
+    </div>
+
+    <!-- <div class="footer"><p>N A O M I   B A S U   2 0 1 6</p></div> -->
+  </body> 
+</html>

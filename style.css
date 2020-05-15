@@ -51,42 +51,33 @@ html, body {
   top: 68px;
 }
 
-#about {
-  animation-delay: 1s;
+.icon {
   position: relative;
   display: block;
   height: 40px;
   width: 40px;
+}
+
+#about {
+  animation-delay: 1s;
   right: 140px;
   bottom: 51px;
 }
 
 #art {
   animation-delay: 1.5s;
-  position: relative;
-  display: block;
-  height: 40px;
-  width: 40px;
-  bottom: 233px;
   right: 7px;
+  bottom: 233px;
 }
 
 #instagram {
   animation-delay: 2s;
-  position: relative;
-  display: block;
-  height: 40px;
-  width: 40px;
   left: 142px;
   bottom: 132px;
 }
 
 #project {
   animation-delay: 2.5s;
-  position: relative;
-  display: block;
-  height: 40px;
-  width: 40px;
   right: 4px;  
   bottom: 31px; 
 }
