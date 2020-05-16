@@ -71,7 +71,7 @@ function load_projects() {
     image.setAttribute('class', 'block fade');
     image.setAttribute('src', 'projectPages/' + project_dict[element]);
   }
-  setTimeout(setupBlocks, 200);
+  setTimeout(setupBlocks, 300);
 } 
 
 function load_art() {
@@ -89,7 +89,7 @@ function load_art() {
     image.setAttribute('class', 'block fade');
     image.setAttribute('src', element);
   }
-  setTimeout(setupBlocks, 200);
+  setTimeout(setupBlocks, 300);
 } 
 
 function load_about() {
