@@ -89,7 +89,7 @@ function load_art() {
     image.setAttribute('class', 'block fade');
     image.setAttribute('src', element);
   }
-  setTimeout(setupBlocks, 300);
+  setTimeout(setupBlocks, 400);
 } 
 
 function load_about() {
