@@ -32,10 +32,10 @@
 				$("#project").hide().delay(800).fadeIn(500);
 				$(".block").hide().delay(850).fadeIn(600)    
 			  });	
-			$(window).resize(setupBlocks); 
+			$(window).resize(setupBlocks);
 			
 			var requestedPage = "";
-			// Get requestedPage from cookie
+			// Get requestedPage from storage
 			(function () {
    		 		requestedPage = window.localStorage.getItem("requestedPage");
 			}(window));
@@ -49,7 +49,7 @@
 			if (requestedPage == 'about') {
 				load_about();
 			}	
-			setupBlocks();	
+			setTimeout(setupBlocks, 500);
 	    </script>    	
     </div>
 
