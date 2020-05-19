@@ -71,7 +71,7 @@ function load_projects() {
     image.setAttribute('class', 'block fade');
     image.setAttribute('src', 'projectPages/' + project_dict[element]);
   }
-  setTimeout(setupBlocks, 300);
+  setTimeout(setupBlocks, 400);
 } 
 
 function load_art() {
@@ -103,8 +103,7 @@ function load_about() {
   var contact = content.appendChild(document.createElement('p'));
   contact.setAttribute('id', 'contact');
   contact.innerHTML = 'For commissions, collaborations and general inquiries, drop me an email at <a href="mailto:naomibasu@gmail.com"><i>naomibasu[at]gmail.com</i></a>.';
-
-  setTimeout(setupBlocks, 200);
+  setTimeout(setupBlocks, 400);
 } 
 
 
