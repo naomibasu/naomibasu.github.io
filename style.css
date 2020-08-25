@@ -42,6 +42,9 @@ html, body {
   margin-top: 19vh;
 }
 
+li {
+  cursor: pointer;
+}
 
 #logo {
   animation-delay: .5s;
@@ -92,6 +95,3 @@ html, body {
 .fade:hover {
   opacity: 0.5;
 }
-
-
-

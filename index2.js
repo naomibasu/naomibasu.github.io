@@ -105,5 +105,3 @@ function load_about() {
   contact.innerHTML = 'For commissions, collaborations and general inquiries, drop me an email at <a href="mailto:naomibasu@gmail.com"><i>naomibasu[at]gmail.com</i></a>.';
   setTimeout(setupBlocks, 400);
 } 
-
-

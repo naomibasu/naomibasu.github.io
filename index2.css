@@ -43,6 +43,10 @@ nav li {
   margin: 45px;
 }
 
+li {
+  cursor: pointer;
+}
+
 .fade {
  opacity: 1;
  transition: opacity .25s ease-in-out;
@@ -78,7 +82,3 @@ p a {
 	word-spacing: 2.5px;
 	font-size: 0.95em;
 }
-
-
-
-

@@ -18,11 +18,11 @@
     <script>
       $(function() {
         $(document).ready(function() {
-          $("#logo").hide().fadeIn(1000);
-          $("#about").hide().delay(300).fadeIn(500);
-          $("#art").hide().delay(600).fadeIn(500);
-          $("#instagram").hide().delay(900).fadeIn(500);
-          $("#project").hide().delay(1200).fadeIn(500);
+          $("#logo").hide().fadeIn(200);
+          $("#about").hide().delay(200).fadeIn(500);
+          $("#art").hide().delay(400).fadeIn(500);
+          $("#instagram").hide().delay(600).fadeIn(500);
+          $("#project").hide().delay(800).fadeIn(500);
           // $("footer").hide().delay(1500).fadeIn(500);
         });
       });
@@ -31,15 +31,14 @@
   	<div class="main">
       <center>
         <div class="container">
-          <img id="logo" src="logo.png"/>
-          <a class="icon" id="about" onclick="setPage('about')"><img class="fade" src="icons/about.png"/></a>
-          <a class="icon" id="art" onclick="setPage('art')"><img class="fade" src="icons/art.png"/></a>
-          <a class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/"><img class="fade" src="icons/instagram.png"/></a>
-          <a class="icon" id="project" onclick="setPage('projects')"><img class="fade" src="icons/project.png"/></a>
+          <img id="logo" href="#" src="logo.png"/>
+          <a title="About" class="icon" id="about" onclick="setPage('about')"><img class="fade" src="icons/about.png"/></a>
+          <a title="Art" class="icon" id="art" onclick="setPage('art')"><img class="fade" src="icons/art.png"/></a>
+          <a title="Instagram" class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/"><img class="fade" src="icons/instagram.png"/></a>
+          <a title="Projects" class="icon" id="project" onclick="setPage('projects')"><img class="fade" src="icons/project.png"/></a>
         </div>
       </center>
       <!-- <center><footer>N A O M I     B A S U     2 0 1 6</footer></center> -->
     </div>
   </body>
 </html>
-
