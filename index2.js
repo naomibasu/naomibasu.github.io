@@ -2,9 +2,9 @@
 var pageTitle = document.head.getElementsByTagName('title');
 
 // Create image links
-const paintingString = "photos/paintings/";
+const artDirectory = "photos/paintings/";
 
-var art_names = [paintingString+'pops.jpg', paintingString+'ma2.jpeg', paintingString+'pops_dinner.jpeg', paintingString+'ma.jpeg', paintingString+'napping.jpeg', paintingString+'miniature.jpeg'];
+var art_names = ['dawon1.jpeg', 'ma.jpeg', 'pops.jpeg', 'pops_dinner.jpeg'];
 var project_names = ['earthwiki.html', 'forcefield.html', 'sketchar.html'];
 var project_dict = {
   'earthwiki.html': 'epgifs/earthWiki.gif',
@@ -83,7 +83,7 @@ function load_art() {
 
   for (const element of art_names) {
     var link = document.getElementById('content').appendChild(document.createElement('a'));
-    link.setAttribute('href', element);
+    link.setAttribute('href', artDirectory + element);
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
