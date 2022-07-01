@@ -4,7 +4,7 @@ var pageTitle = document.head.getElementsByTagName('title');
 // Create image links
 const artDirectory = "photos/paintings/";
 
-var art_names = ['dawon1.jpeg', 'dawon2.jpeg', 'nayikow.jpeg', 'ma.jpeg', 'pops.jpeg', 'pops_dinner.jpeg'];
+var art_names = ['mandarava.jpeg', 'cow.jpeg', 'dawon1.jpeg', 'dawon2.jpeg', 'nayikow.jpeg', 'ma.jpeg', 'pops.jpeg', 'pops_dinner.jpeg'];
 var project_names = ['earthwiki.html', 'forcefield.html', 'sketchar.html'];
 var project_dict = {
   'earthwiki.html': 'epgifs/earthWiki.gif',
