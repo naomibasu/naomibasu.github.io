@@ -15,7 +15,7 @@ var project_dict = {
 // BLOCK COLUMN SETUP
 var colCount = 0;
 var colWidth = 0;
-var margin = 30;
+var margin = 25;
 var windowWidth = 0;
 var blocks = [];  
 
