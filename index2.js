@@ -4,7 +4,7 @@ var pageTitle = document.head.getElementsByTagName('title');
 // Create image links
 const artDirectory = "photos/paintings/";
 
-var art_names = ['mother.jpeg', 'mandarava.jpeg', 'cow.jpeg', 'dawon1.jpeg', 'dawon2.jpeg', 'nayikow.jpeg', 'ma.jpeg', 'pops.jpeg', 'pops_dinner.jpeg'];
+var art_names = ['mother.jpeg', 'naomi_basu_mandarava.jpeg', 'cow.jpeg', 'naomi_basu_dawon1.jpeg', 'naomi_basu_dawon2.jpeg', 'nayikow.jpeg', 'ma.jpeg', 'naomi_basu_pops.jpeg', 'pops_dinner.jpeg'];
 var project_names = ['earthwiki.html', 'forcefield.html', 'sketchar.html'];
 var project_dict = {
   'earthwiki.html': 'epgifs/earthWiki.gif',
@@ -69,6 +69,7 @@ function load_projects() {
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
+    image.setAttribute('alt', 'Naomi Basu');
     image.setAttribute('src', 'projectPages/' + project_dict[element]);
   }
   setTimeout(setupBlocks, 400);

@@ -1,3 +1,3 @@
 # naomibasu.github.io
 
-Personal Website
+Naomi Basu Personal Website
