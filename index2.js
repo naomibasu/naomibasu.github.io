@@ -88,6 +88,7 @@ function load_art() {
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
+    image.setAttribute('alt', 'Naomi Basu')
     image.setAttribute('src', artDirectory + element);
   }
   setTimeout(setupBlocks, 400);
