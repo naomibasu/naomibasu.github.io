@@ -4,7 +4,7 @@ var pageTitle = document.head.getElementsByTagName('title');
 // Create image links
 const artDirectory = "photos/paintings/";
 
-var art_names = ['mother.jpeg', 'naomi_basu_mandarava.jpeg', 'cow.jpeg', 'naomi_basu_dawon1.jpeg', 'naomi_basu_dawon2.jpeg', 'nayikow.jpeg', 'ma.jpeg', 'naomi_basu_pops.jpeg', 'pops_dinner.jpeg'];
+var art_names = ['Naomi_Basu_Milk_Bath_2023.jpeg', 'mother.jpeg', 'naomi_basu_mandarava.jpeg', 'cow.jpeg', 'naomi_basu_dawon1.jpeg', 'naomi_basu_dawon2.jpeg', 'nayikow.jpeg', 'ma.jpeg', 'naomi_basu_pops.jpeg', 'pops_dinner.jpeg'];
 var project_names = ['earthwiki.html', 'forcefield.html', 'sketchar.html'];
 var project_dict = {
   'earthwiki.html': 'epgifs/earthWiki.gif',
