@@ -3,57 +3,52 @@ var pageTitle = document.head.getElementsByTagName('title');
 
 // Create image links
 const artDirectory = "images/paintings/";
+const thumbnailDirectory = "images/thumbnails/";
 var art_list = [
   {
-    fullImage: 'Naomi_Basu_Metamorphose_2023.JPG',
-    minImage: 'Naomi_Basu_Metamorphose_2023.JPG',
+    filename: 'Naomi_Basu_Metamorphose_2023.JPG',
     title: 'Metamorphose',
     medium: 'Acrylic, Ground Indigo, and Resin on Wood',
     dimensions: '28 x 28 inches',
     year: '2023'
   },
   {
-    fullImage: 'Naomi_Basu_Milk_Bath_2023.jpeg',
-    minImage: 'Naomi_Basu_Milk_Bath_2023.jpeg',
+    filename: 'Naomi_Basu_Milk_Bath_2023.jpeg',
     title: 'Milk Bath',
     medium: 'Oil and Muslin on Unstretched Canvas',
     dimensions: '36 x 42 inches',
     year: '2023'
   },
   {
-    fullImage: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
-    minImage: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
+    filename: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
     title: 'Born in a Lake of Tears',
     medium: 'Acrylic and Recycled Sari on Unstretched Canvas',
     dimensions: '37.5 x 42 inches',
     year: '2022'
   },
   {
-    fullImage: 'Naomi_Basu_SkyDancer_2022.jpeg',
-    minImage: 'Naomi_Basu_SkyDancer_2022.jpeg',
+    filename: 'Naomi_Basu_SkyDancer_2022.jpeg',
     title: 'Sky Dancer',
     medium: 'Acrylic on Canvas',
     dimensions: '28 x 28 inches',
     year: '2022'
   },
   {
-    fullImage: 'Naomi_Basu_Docile_2022.jpeg',
-    minImage: 'Naomi_Basu_Docile_2022.jpeg',
+    filename: 'Naomi_Basu_Docile_2022.jpeg',
     title: 'Docile',
     medium: 'Oil on Canvas',
     dimensions: '24 x 34 inches',
     year: '2022'
   },
   {
-    fullImage: 'Naomi_Basu_DawonI_2021.jpeg',
-    minImage: 'Naomi_Basu_DawonI_2021.jpeg',
+    filename: 'Naomi_Basu_DawonI_2021.jpeg',
     title: 'Dawon (I)',
     medium: 'Acrylic on Wood',
     dimensions: '17 x 17 inches',
     year: '2021'
   },
   {
-    fullImage: 'Naomi_Basu_DawonII_2021.jpeg',
+    filename: 'Naomi_Basu_DawonII_2021.jpeg',
     minImage: 'Naomi_Basu_DawonII_2021.jpeg',
     title: 'Dawon (II)',
     medium: 'Acrylic on Wood',
@@ -61,8 +56,7 @@ var art_list = [
     year: '2021'
   },
   {
-    fullImage: 'Naomi_Basu_Nayikows_2021.jpeg',
-    minImage: 'Naomi_Basu_Nayikows_2021.jpeg',
+    filename: 'Naomi_Basu_Nayikows_2021.jpeg',
     title: 'Nayikows',
     medium: 'Embroidery on Raw Silk Sari',
     dimensions: '9 x 26 inches',
@@ -149,14 +143,14 @@ function load_art() {
 
   for (const a of art_list) {
     var link = document.getElementById('content').appendChild(document.createElement('a'));
-    link.setAttribute('href', artDirectory + a.fullImage);
+    link.setAttribute('href', artDirectory + a.filename);
     link.setAttribute('data-lightbox', "YOOHOO");
     link.setAttribute('data-title', `<br>${a.title}<br>${a.medium}<br>${a.dimensions}<br>${a.year}`);
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
     image.setAttribute('alt', a['full-image'])
-    image.setAttribute('src', artDirectory + a.minImage);
+    image.setAttribute('src', thumbnailDirectory + a.filename);
   }
   setTimeout(setupBlocks, 400);
 } 
