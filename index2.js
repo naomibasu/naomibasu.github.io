@@ -2,9 +2,74 @@
 var pageTitle = document.head.getElementsByTagName('title');
 
 // Create image links
-const artDirectory = "photos/paintings/";
+const artDirectory = "images/paintings/";
+var art_list = [
+  {
+    fullImage: 'Naomi_Basu_Metamorphose_2023.JPG',
+    minImage: 'Naomi_Basu_Metamorphose_2023.JPG',
+    title: 'Metamorphose',
+    medium: 'Acrylic, Ground Indigo, and Resin on Wood',
+    dimensions: '28 x 28 inches',
+    year: '2023'
+  },
+  {
+    fullImage: 'Naomi_Basu_Milk_Bath_2023.jpeg',
+    minImage: 'Naomi_Basu_Milk_Bath_2023.jpeg',
+    title: 'Milk Bath',
+    medium: 'Oil and Muslin on Unstretched Canvas',
+    dimensions: '36 x 42 inches',
+    year: '2023'
+  },
+  {
+    fullImage: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
+    minImage: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
+    title: 'Born in a Lake of Tears',
+    medium: 'Acrylic and Recycled Sari on Unstretched Canvas',
+    dimensions: '37.5 x 42 inches',
+    year: '2022'
+  },
+  {
+    fullImage: 'Naomi_Basu_SkyDancer_2022.jpeg',
+    minImage: 'Naomi_Basu_SkyDancer_2022.jpeg',
+    title: 'Sky Dancer',
+    medium: 'Acrylic on Canvas',
+    dimensions: '28 x 28 inches',
+    year: '2022'
+  },
+  {
+    fullImage: 'Naomi_Basu_Docile_2022.jpeg',
+    minImage: 'Naomi_Basu_Docile_2022.jpeg',
+    title: 'Docile',
+    medium: 'Oil on Canvas',
+    dimensions: '24 x 34 inches',
+    year: '2022'
+  },
+  {
+    fullImage: 'Naomi_Basu_DawonI_2021.jpeg',
+    minImage: 'Naomi_Basu_DawonI_2021.jpeg',
+    title: 'Dawon (I)',
+    medium: 'Acrylic on Wood',
+    dimensions: '17 x 17 inches',
+    year: '2021'
+  },
+  {
+    fullImage: 'Naomi_Basu_DawonII_2021.jpeg',
+    minImage: 'Naomi_Basu_DawonII_2021.jpeg',
+    title: 'Dawon (II)',
+    medium: 'Acrylic on Wood',
+    dimensions: '17 x 17 inches',
+    year: '2021'
+  },
+  {
+    fullImage: 'Naomi_Basu_Nayikows_2021.jpeg',
+    minImage: 'Naomi_Basu_Nayikows_2021.jpeg',
+    title: 'Nayikows',
+    medium: 'Embroidery on Raw Silk Sari',
+    dimensions: '9 x 26 inches',
+    year: '2021'
+  },
+];
 
-var art_names = ['Naomi_Basu_Metamorphose.JPG', 'Naomi_Basu_Milk_Bath_2023.jpeg', 'mother.jpeg', 'naomi_basu_mandarava.jpeg', 'cow.jpeg', 'naomi_basu_dawon1.jpeg', 'naomi_basu_dawon2.jpeg', 'nayikow.jpeg'];
 var project_names = ['earthwiki.html', 'forcefield.html', 'sketchar.html'];
 var project_dict = {
   'earthwiki.html': 'epgifs/earthWiki.gif',
@@ -82,14 +147,16 @@ function load_art() {
   pageTitle = "art";
   clearElement('content');
 
-  for (const element of art_names) {
+  for (const a of art_list) {
     var link = document.getElementById('content').appendChild(document.createElement('a'));
-    link.setAttribute('href', artDirectory + element);
+    link.setAttribute('href', artDirectory + a.fullImage);
+    link.setAttribute('data-lightbox', "YOOHOO");
+    link.setAttribute('data-title', `<br>${a.title}<br>${a.medium}<br>${a.dimensions}<br>${a.year}`);
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
-    image.setAttribute('alt', 'Naomi Basu')
-    image.setAttribute('src', artDirectory + element);
+    image.setAttribute('alt', a['full-image'])
+    image.setAttribute('src', artDirectory + a.minImage);
   }
   setTimeout(setupBlocks, 400);
 } 
