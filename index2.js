@@ -145,7 +145,7 @@ function load_art() {
     var link = document.getElementById('content').appendChild(document.createElement('a'));
     link.setAttribute('href', artDirectory + a.filename);
     link.setAttribute('data-lightbox', "YOOHOO");
-    link.setAttribute('data-title', `<br>${a.title}<br>${a.medium}<br>${a.dimensions}<br>${a.year}`);
+    link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions}<br>${a.year}`);
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
