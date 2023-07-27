@@ -157,6 +157,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-details {
+  font-family: 'Helvetica';
   width: 85%;
   float: left;
   text-align: left;
@@ -164,6 +165,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-caption {
+  font-family: 'Helvetica';
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
@@ -174,6 +176,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-number {
+  font-family: 'Helvetica';
   display: block;
   clear: left;
   padding-bottom: 1em;
