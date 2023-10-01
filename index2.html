@@ -13,14 +13,14 @@
 
   <body>
     <nav>
-		<ul>
-		  <li><a title="About" class="icon" id="about" onclick="load_about()"><img class="fade" src="icons/about.png"/></a></li>
-		  <li><a title="Art" class="icon" id="art" onclick="load_art()"><img class="fade" src="icons/art.png"/></a></li>
-		  <li><a title="Home" class="icon" id="logo" href="index.html"><img class="fade" src="icons/logoicon.png"/></a></li>
-		  <li><a title="Instagram" class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/ " target="_blank"><img class="fade" src="icons/instagram.png"/></a></li>
-		  <li><a title="Projects" class="icon" id="project" onclick="load_projects()"><img class="fade" src="icons/project.png"/></a></li>
-		</ul>
-	</nav>
+			<ul>
+			  <li><a title="About" class="icon" id="about"  href="naomi-basu-artist-cv.pdf"><img class="fade" src="icons/about.png"/></a></li>
+			  <li><a title="Art" class="icon" id="art" onclick="load_art()"><img class="fade" src="icons/art.png"/></a></li>
+			  <li><a title="Home" class="icon" id="logo" href="index.html"><img class="fade" src="icons/logoicon.png"/></a></li>
+			  <li><a title="Instagram" class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/ " target="_blank"><img class="fade" src="icons/instagram.png"/></a></li>
+			  <li><a title="Projects" class="icon" id="project" onclick="load_projects()"><img class="fade" src="icons/project.png"/></a></li>
+			</ul>
+		</nav>
 
     <div id="content">
 	    <script>
@@ -47,9 +47,6 @@
 			else if (requestedPage == 'projects') {
 				load_projects();
 			}
-			if (requestedPage == 'about') {
-				load_about();
-			}	
 			setTimeout(setupBlocks, 500);
 	    </script>    	
     </div>
