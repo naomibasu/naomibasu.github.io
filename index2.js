@@ -6,7 +6,21 @@ const artDirectory = "images/paintings/";
 const thumbnailDirectory = "images/thumbnails/";
 var art_list = [
   {
-    filename: 'Naomi_Basu_Metamorphose_2023.JPG',
+    filename: 'Naomi_Basu_Bushido_2023.jpeg',
+    title: 'Bushido',
+    medium: 'Acrylic, Mineral Pigments, and Resin on Wood',
+    dimensions: '12 x 12 inches',
+    year: '2023'
+  },
+  {
+    filename: 'Naomi_Basu_Vajra_2023.jpeg',
+    title: 'Vajra',
+    medium: 'Acrylic, Mineral Pigments, and Resin on Wood',
+    dimensions: '12 x 12 inches',
+    year: '2023'
+  },
+  {
+    filename: 'Naomi_Basu_Metamorphose_2023.jpeg',
     title: 'Metamorphose',
     medium: 'Acrylic, Ground Indigo, and Resin on Wood',
     dimensions: '28 x 28 inches',
@@ -31,13 +45,6 @@ var art_list = [
     title: 'Sky Dancer',
     medium: 'Acrylic on Canvas',
     dimensions: '28 x 28 inches',
-    year: '2022'
-  },
-  {
-    filename: 'Naomi_Basu_Docile_2022.jpeg',
-    title: 'Docile',
-    medium: 'Oil on Canvas',
-    dimensions: '24 x 34 inches',
     year: '2022'
   },
   {
