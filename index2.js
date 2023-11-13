@@ -20,6 +20,13 @@ var art_list = [
     year: '2023'
   },
   {
+    filename: 'Naomi_Basu_VapeNation_2023.jpeg',
+    title: 'VapeNation',
+    medium: 'Acrylic, Mineral Pigments, and Resin on Wood',
+    dimensions: '11.5 x 11.5 inches',
+    year: '2023'
+  },
+  {
     filename: 'Naomi_Basu_Metamorphose_2023.jpeg',
     title: 'Metamorphose',
     medium: 'Acrylic, Ground Indigo, and Resin on Wood',
