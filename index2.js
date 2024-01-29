@@ -27,6 +27,13 @@ var art_list = [
     year: '2023'
   },
   {
+    filename: 'Naomi_Basu_EnglishBreakfast_2023.jpeg',
+    title: 'English Breakfast',
+    medium: 'Acrylic, Indigo, Tea, Gold Leaf, and Resin on Wood',
+    dimensions: '11.5 x 11.5 inches',
+    year: '2023'
+  },
+  {
     filename: 'Naomi_Basu_Metamorphose_2023.jpeg',
     title: 'Metamorphose',
     medium: 'Acrylic, Ground Indigo, and Resin on Wood',
@@ -57,7 +64,7 @@ var art_list = [
   {
     filename: 'Naomi_Basu_DawonI_2021.jpeg',
     title: 'Dawon (I)',
-    medium: 'Acrylic on Wood',
+    medium: 'Acrylic and Resin on Wood',
     dimensions: '17 x 17 inches',
     year: '2021'
   },
@@ -65,7 +72,7 @@ var art_list = [
     filename: 'Naomi_Basu_DawonII_2021.jpeg',
     minImage: 'Naomi_Basu_DawonII_2021.jpeg',
     title: 'Dawon (II)',
-    medium: 'Acrylic on Wood',
+    medium: 'Acrylic and Resin on Wood',
     dimensions: '17 x 17 inches',
     year: '2021'
   },
