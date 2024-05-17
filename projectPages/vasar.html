@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VasAR</title>
+    <meta charset = "utf-8">
+    <meta name = "viewport" content = "width=device-width" initial-scale="1">
+    <link rel="stylesheet" type="text/css" href="sketchar.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="my_jquery.js"></script>
+    <script>
+      function setPage(title) {
+        window.localStorage.setItem("requestedPage", title);
+        window.location.href = "../index2.html";
+      }
+    </script>
+  <head>
+  <body onload="setupBlocks();">
+    <script>
+      $(function() {
+        $(document).ready(function() {
+          $("#about").hide().fadeIn(500);
+          $("#camera").hide().delay(200).fadeIn(500);
+          $("#logo").hide().delay(400).fadeIn(500);
+          $("#linkedin").hide().delay(600).fadeIn(500);
+          $("#project").hide().delay(800).fadeIn(500);
+          $(".block").hide().delay(850).fadeIn(600)
+          //$("footer").hide().delay(1200).fadeIn(500);
+        });
+      })(jQuery);
+    </script>
+
+    <nav>
+      <ul>
+        <li><a class="icon" id="about" onclick="setPage('about')"><img class="fade" src="../icons/about.png"/></a></li>
+        <li><a class="icon" id="art" onclick="setPage('art')"><img class="fade" src="../icons/art.png"/></a></li>
+        <li><a class="icon" id="logo" href="../index.html"><img class="fade" src="../icons/logoicon.png"/></a></li>
+        <li><a class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/"><img class="fade" src="../icons/instagram.png"/></a></li>
+        <li><a class="icon" id="project" onclick="setPage('projects')"><img class="fade" src="../icons/project.png"/></a></li>
+      </ul>
+    </nav>
+
+    <div class="main">
+      <h1>VasAR</h1>
+
+      <p id="p1">
+        In 2019, I worked on the VasAR project as an AR researcher in the Computer Graphics and User Interfaces (CGUI) Lab at Columbia University.
+
+        Many AR and VR task domains involve manipulating virtual objects; for example, to perform 3D geometric transformations. These operations are typically accomplished with tracked hands or hand-held controllers. However, there are some activities in which the user's hands are already busy with another task, requiring the user to temporarily stop what they are doing to perform the second task, while also taking time to disengage and reengage with the original task (e.g., putting down and picking up tools). To avoid the need to overload the user's hands this way in an AR system for guiding a physician performing a surgical procedure, we developed a hands-free approach to performing 3D transformations on patient-specific virtual organ models. Our approach uses small head motions to accomplish first-order and zero-order control, in conjunction with voice commands to establish the type of transformation.
+      </p>  
+      <p id="p1">
+        To show the effectiveness of this approach for translating, scaling, and rotating 3D virtual models, we conducted a within-subject study comparing the hands-free approach with one based on conventional manual techniques, both running on a Microsoft HoloLens and using the same voice commands to specify transformation type. Independent of any additional time to transition between tasks, users were significantly faster overall using the hands-free approach, significantly faster for hands-free translation and scaling, and faster (although not significantly) for hands-free rotation. The paper was published in <a href="https://ieeexplore.ieee.org/abstract/document/8943734">IEEE</a>.
+      </p>
+
+      <p id="p2">
+        <img src="vasAR/vasar.gif" 
+          width="100%" alt="">
+      </p>
+      <p id="p2">
+        <img src="vasAR/vasar-2.gif" 
+          width="100%" alt="">
+      </p>
+           
+
+    </div>
+
+  </body> 
+</html>

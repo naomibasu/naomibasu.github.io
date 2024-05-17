@@ -85,9 +85,11 @@ var art_list = [
   },
 ];
 
-var project_names = ['earthwiki.html', 'forcefield.html', 'sketchar.html'];
+var project_names = ['vasar.html', 'earthwiki.html', 'arreviews.html', 'forcefield.html', 'sketchar.html'];
 var project_dict = {
+  'vasar.html': 'vasAR/vasar-2.gif',
   'earthwiki.html': 'epgifs/earthWiki.gif',
+  'arreviews.html': 'epgifs/discovery.gif',
   'forcefield.html': 'epgifs/fade.gif',
   'sketchar.html': 'sketchAR.gif',
 };
