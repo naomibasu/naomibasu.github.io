@@ -1,97 +1,58 @@
-html, body {
-  width: 100%;
+html {
   height: 100%;
-  padding: 0;
   margin: 0;
-  text-align: center;
-	font-family: "Calibri";
-	background-color: white;
-	color: #6b6b6b;
-  overflow: hidden;
 }
 
-.main {
-  position: relative;
+body {
+  min-height: 100%;  
   width: 100%;
-  height: 100%;
+  font-family: "Calibri";
+  background-color: white;
+  color: #6b6b6b;
 }
 
-/* footer {
-	position: relative;
-  bottom: -197px;
-  width: 100%;
-  font-size: 0.7em;
-  white-space: pre;
-} */
-
-.center {
+ul {
+  padding-left: 0;
   text-align: center;
+  margin-left: 10px;
 }
 
-@keyframes fdsseq {
-  100% {opacity: 1;}
-}
-
-.container {
-  animation: fdsseq .5s forwards;
-  position: relative;
-  display: block;
+nav {
+  position: fixed;
+  height: 100px;
+  top: 14.5%;
   width: 20%;
-  min-height: 320px;
-  min-width: 320px;
-  margin-top: 19vh;
+  left: -3%;
+
+  li {
+    display: block;
+    text-align: center;
+    margin: 45px;
+  }
 }
 
-li {
+a {
   cursor: pointer;
 }
 
-#logo {
-  animation-delay: .5s;
-  position: relative;
-  height: 190px;
-  width: 190px;
-  top: 68px;
-}
-
-.icon {
-  position: relative;
-  display: block;
-  height: 40px;
-  width: 40px;
-}
-
-#about {
-  animation-delay: 1s;
-  right: 140px;
-  bottom: 51px;
-}
-
-#art {
-  animation-delay: 1.5s;
-  right: 7px;
-  bottom: 233px;
-}
-
-#instagram {
-  animation-delay: 2s;
-  left: 142px;
-  bottom: 132px;
-}
-
-#project {
-  animation-delay: 2.5s;
-  right: 4px;  
-  bottom: 31px; 
-}
-
 .fade {
-  opacity: 1;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .15s ease-in-out;
-  -webkit-transition: opacity .15s ease-in-out;
+ opacity: 1;
+ transition: opacity .25s ease-in-out;
+ -moz-transition: opacity .15s ease-in-out;
+ -webkit-transition: opacity .15s ease-in-out;
 }
 
 .fade:hover {
   opacity: 0.5;
+}
+
+.block {
+  margin-left: 13.5%;
+  position: absolute;
+  padding: 20px;
+  width: 260px;
+}
+
+#content {
+  text-align: center;
 }

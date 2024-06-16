@@ -138,11 +138,11 @@ function clearElement(id) {
 
 
 // LOAD PAGES
-function load_projects() {
-  if (pageTitle == "projects") {
+function load_tech() {
+  if (pageTitle == "Tech") {
     return;
   }
-  pageTitle = "projects";
+  pageTitle = "Tech";
   clearElement('content');
 
   for (const element of project_names) {
@@ -154,20 +154,20 @@ function load_projects() {
     image.setAttribute('alt', 'Naomi Basu');
     image.setAttribute('src', 'projectPages/' + project_dict[element]);
   }
-  setTimeout(setupBlocks, 400);
+  setTimeout(setupBlocks, 300);
 } 
 
 function load_art() {
-  if (pageTitle == "art") {
+  if (pageTitle == "Art") {
     return;
   }
-  pageTitle = "art";
+  pageTitle = "Art";
   clearElement('content');
 
   for (const a of art_list) {
     var link = document.getElementById('content').appendChild(document.createElement('a'));
     link.setAttribute('href', artDirectory + a.filename);
-    link.setAttribute('data-lightbox', "YOOHOO");
+    link.setAttribute('data-lightbox', "thismakesitwork");
     link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions}<br>${a.year}`);
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
@@ -175,19 +175,6 @@ function load_art() {
     image.setAttribute('alt', a['full-image'])
     image.setAttribute('src', thumbnailDirectory + a.filename);
   }
-  setTimeout(setupBlocks, 400);
-} 
+  setTimeout(setupBlocks, 300);
+}
 
-function load_about() {
-  if (pageTitle == "about") {
-    return;
-  }
-  pageTitle = "about";
-  clearElement('content');
-
-  var content = document.getElementById('content');
-  var contact = content.appendChild(document.createElement('p'));
-  contact.setAttribute('id', 'contact');
-  contact.innerHTML = 'For commissions, collaborations and general inquiries, drop me an email at <a href="mailto:naomibasu@gmail.com"><i>naomibasu[at]gmail.com</i></a>.';
-  setTimeout(setupBlocks, 400);
-} 
