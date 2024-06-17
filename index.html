@@ -15,36 +15,26 @@
     <nav>
       <ul>
         <li><a title="About" id="about" href="naomi-basu-artist-cv.pdf" target="_blank"><img class="fade" src="icons/about.png"/></a></li>
-        <li><a title="Art" id="art" onclick="load_art()"><img class="fade" src="icons/art.png"/></a></li>
+        <li><a title="Art" id="art" onclick="setPage('Art')"><img class="fade" src="icons/art.png"/></a></li>
         <li><img src="icons/logoicon.png"/></li>
         <li><a title="Instagram" id="instagram" href="https://www.instagram.com/naomi.basu/" target="_blank"><img class="fade" src="icons/instagram.png"/></a></li>
-        <li><a title="Tech" id="project" onclick="load_tech()"><img class="fade" src="icons/project.png"/></a></li>
+        <li><a title="Tech" id="project" onclick="setPage('Tech')"><img class="fade" src="icons/project.png"/></a></li>
       </ul>
     </nav>
 
     <div id="content">
       <script>
-        $(function() {
-          // Set up side icons
-        $("#about");
-        $("#art");
-        $("#home");
-        $("#instagram");
-        $("#project");
-        });
-
-      var requestedPage = "Art";
       // Get requestedPage from storage
       (function () {
           requestedPage = window.localStorage.getItem("requestedPage");
+          if (requestedPage == 'Tech') {
+            load_tech();
+          }
+          else {
+            load_art();
+          }
       }(window));
        
-      if (requestedPage == 'Art') {
-        load_art();
-      }
-      else if (requestedPage == 'Tech') {
-        load_tech();
-      }
       $(window).resize(setupBlocks);
       </script> 
     </div>

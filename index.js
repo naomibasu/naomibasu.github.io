@@ -94,6 +94,11 @@ var project_dict = {
   'sketchar.html': 'sketchAR.gif',
 };
 
+function setPage(title) {
+  window.localStorage.setItem("requestedPage", title);
+  window.location.href = "index.html";
+}
+
 // BLOCK COLUMN SETUP
 var colCount = 0;
 var colWidth = 0;
