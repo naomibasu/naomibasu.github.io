@@ -32,7 +32,19 @@
         $("#instagram");
         $("#project");
         });
-      load_art();
+
+      var requestedPage = "Art";
+      // Get requestedPage from storage
+      (function () {
+          requestedPage = window.localStorage.getItem("requestedPage");
+      }(window));
+       
+      if (requestedPage == 'Art') {
+        load_art();
+      }
+      else if (requestedPage == 'Tech') {
+        load_tech();
+      }
       $(window).resize(setupBlocks);
       </script> 
     </div>

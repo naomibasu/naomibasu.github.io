@@ -33,6 +33,7 @@ nav {
 
 a {
   cursor: pointer;
+  color: #6b6b6b;
 }
 
 .fade {
@@ -40,6 +41,7 @@ a {
  transition: opacity .25s ease-in-out;
  -moz-transition: opacity .15s ease-in-out;
  -webkit-transition: opacity .15s ease-in-out;
+ cursor: pointer;
 }
 
 .fade:hover {

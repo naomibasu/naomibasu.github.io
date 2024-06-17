@@ -6,36 +6,22 @@
     <meta name = "viewport" content = "width=device-width" initial-scale="1">
     <link rel="stylesheet" type="text/css" href="sketchar.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="my_jquery.js"></script>
     <script>
       function setPage(title) {
         window.localStorage.setItem("requestedPage", title);
-        window.location.href = "../index2.html";
+        window.location.href = "../index.html";
       }
     </script>
   <head>
+    
   <body>
-    <script>
-      $(function() {
-        $(document).ready(function() {
-          $("#about").hide().fadeIn(500);
-          $("#camera").hide().delay(200).fadeIn(500);
-          $("#logo").hide().delay(400).fadeIn(500);
-          $("#instagram").hide().delay(600).fadeIn(500);
-          $("#project").hide().delay(800).fadeIn(500);
-          $(".block").hide().delay(850).fadeIn(600)
-          //$("footer").hide().delay(1200).fadeIn(500);
-        });
-      })(jQuery);
-    </script>
-
     <nav>
       <ul>
-        <li><a class="icon" id="about" onclick="setPage('about')"><img class="fade" src="../icons/about.png"/></a></li>
-        <li><a class="icon" id="art" onclick="setPage('art')"><img class="fade" src="../icons/art.png"/></a></li>
-        <li><a class="icon" id="logo" href="../index.html"><img class="fade" src="../icons/logoicon.png"/></a></li>
-        <li><a class="icon" id="instagram" href="https://www.instagram.com/naomi.basu/"><img class="fade" src="../icons/instagram.png"/></a></li>
-        <li><a class="icon" id="project" onclick="setPage('projects')"><img class="fade" src="../icons/project.png"/></a></li>
+        <li><a title="About" id="about" href="naomi-basu-artist-cv.pdf" target="_blank"><img class="fade" src="../icons/about.png"/></a></li>
+        <li><a title="Art" id="art" href="../index.html" onclick="setPage('Art')"><img class="fade" src="../icons/art.png"/></a></li>
+        <li><img src="../icons/logoicon.png"/></li>
+        <li><a title="Instagram" id="instagram" href="https://www.instagram.com/naomi.basu/" target="_blank"><img class="fade" src="../icons/instagram.png"/></a></li>
+        <li><a title="Tech" id="project" href="../index.html" onclick="setPage('Tech')"><img class="fade" src="../icons/project.png"/></a></li>
       </ul>
     </nav>
 
