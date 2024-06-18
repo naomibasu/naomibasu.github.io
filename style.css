@@ -64,16 +64,16 @@ a {
 
  @media only screen and (max-width: 700px) {
   .block {
-    margin-left: 15%;
+    margin-left: 20%;
     position: absolute;
     padding: 10px;
-    width: 190px;
+    width: 200px;
   }
  }
 
  @media only screen and (min-width: 700px) {
     .block {
-      margin-left: 20%;
+      margin-left: 15%;
       position: absolute;
       padding: 20px;
       width: 260px;
