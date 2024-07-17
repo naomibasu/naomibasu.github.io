@@ -13,6 +13,20 @@ var art_list = [
     year: '2024'
   },
   {
+    filename: 'Naomi_Basu_Kamadhenu_2024.jpeg',
+    title: 'Kāmadhenu',
+    medium: 'Marker, sumi ink, color pencil, and soft pastel on tea-stained cotton rag',
+    dimensions: '11.7 x 16.5 inches (A3)',
+    year: '2024'
+  },
+  {
+    filename: 'Naomi_Basu_Vyagra_2024.jpeg',
+    title: 'Vyagra',
+    medium: 'Embroidery on recycled cotton, mounted on satin scroll',
+    dimensions: '12.5 x 22.5 inches',
+    year: '2024'
+  },
+  {
     filename: 'Naomi_Basu_Bushido_2023.jpeg',
     title: 'Bushido',
     medium: 'Acrylic, mineral pigments, and resin on wood',
