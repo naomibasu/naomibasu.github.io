@@ -13,6 +13,13 @@ var art_list = [
     year: '2024'
   },
   {
+    filename: 'Naomi_Basu_Zoetrope_2024.GIF',
+    title: 'Bhavacakra Remix (Zoetrope)',
+    medium: 'Acrylic and sumi ink on canvas',
+    dimensions: 'N/A',
+    year: '2024'
+  },
+  {
     filename: 'Naomi_Basu_Kamadhenu_2024.jpeg',
     title: 'Kāmadhenu',
     medium: 'Marker, sumi ink, color pencil, and soft pastel on tea-stained cotton rag',
