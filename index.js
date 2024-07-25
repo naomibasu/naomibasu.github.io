@@ -175,7 +175,6 @@ function load_tech() {
   if (pageTitle == "Tech") {
     return;
   }
-  pageTitle = "Tech";
   clearElement('content');
 
   for (const element of project_names) {
@@ -194,7 +193,6 @@ function load_art() {
   if (pageTitle == "Art") {
     return;
   }
-  pageTitle = "Art";
   clearElement('content');
 
   for (const a of art_list) {

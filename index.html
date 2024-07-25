@@ -29,9 +29,11 @@
           requestedPage = window.localStorage.getItem("requestedPage");
           if (requestedPage == 'Tech') {
             load_tech();
+            window.localStorage.setItem("requestedPage", "");
           }
           else {
             load_art();
+            window.localStorage.setItem("requestedPage", "");
           }
       }(window));
        
