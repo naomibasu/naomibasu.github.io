@@ -8,7 +8,7 @@ var art_list = [
   {
     filename: 'Naomi_Basu_BhavacakraRemix_2024.jpeg',
     title: 'Bhavacakra Remix',
-    medium: 'Acrylic, airbrush, indigo, soft pastel, sumi ink, sequins, ash, gold leaf on canvas',
+    medium: 'Acrylic, indigo, soft pastel, sumi ink, sequins, ash, gold leaf on canvas',
     dimensions: '30 x 40 inches',
     year: '2024'
   },
