@@ -2,7 +2,7 @@
 var pageTitle = document.head.getElementsByTagName('title');
 
 // Create image links
-const artDirectory = "images/paintings/";
+const artDirectory = "images/full_size/";
 const thumbnailDirectory = "images/thumbnails/";
 var art_list = [
   {
@@ -41,6 +41,27 @@ var art_list = [
     year: '2024'
   },
   {
+    filename: 'Naomi_Basu_Nayikows_2022.jpeg',
+    title: 'Nayikows',
+    medium: 'Embroidery on raw silk sari',
+    dimensions: '9 x 26 inches',
+    year: '2022'
+  },
+  {
+    filename: 'Naomi_Basu_Milk_Bath_2023.jpeg',
+    title: 'Milk Bath',
+    medium: 'Oil and muslin on unstretched canvas',
+    dimensions: '36 x 42 inches',
+    year: '2023'
+  },
+  {
+    filename: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
+    title: 'Born in a Lake of Tears',
+    medium: 'Acrylic and recycled sari on unstretched canvas',
+    dimensions: '37.5 x 42 inches',
+    year: '2022'
+  },
+  {
     filename: 'Naomi_Basu_Bushido_2023.jpeg',
     title: 'Bushido',
     medium: 'Acrylic, mineral pigments, and resin on wood',
@@ -52,6 +73,13 @@ var art_list = [
     title: 'Vajra',
     medium: 'Acrylic, mineral pigments, and resin on wood',
     dimensions: '12 x 12 inches',
+    year: '2023'
+  },
+  {
+    filename: 'Naomi_Basu_Metamorphose_2023.jpeg',
+    title: 'Metamorphose',
+    medium: 'Acrylic, ground indigo, and resin on wood',
+    dimensions: '28 x 28 inches',
     year: '2023'
   },
   {
@@ -69,34 +97,6 @@ var art_list = [
     year: '2023'
   },
   {
-    filename: 'Naomi_Basu_Metamorphose_2023.jpeg',
-    title: 'Metamorphose',
-    medium: 'Acrylic, ground indigo, and resin on wood',
-    dimensions: '28 x 28 inches',
-    year: '2023'
-  },
-  {
-    filename: 'Naomi_Basu_Milk_Bath_2023.jpeg',
-    title: 'Milk Bath',
-    medium: 'Oil and muslin on unstretched canvas',
-    dimensions: '36 x 42 inches',
-    year: '2023'
-  },
-  {
-    filename: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
-    title: 'Born in a Lake of Tears',
-    medium: 'Acrylic and recycled sari on unstretched canvas',
-    dimensions: '37.5 x 42 inches',
-    year: '2022'
-  },
-  {
-    filename: 'Naomi_Basu_SkyDancer_2022.jpeg',
-    title: 'Sky Dancer',
-    medium: 'Acrylic on canvas',
-    dimensions: '28 x 28 inches',
-    year: '2022'
-  },
-  {
     filename: 'Naomi_Basu_DawonI_2021.jpeg',
     title: 'Dawon (I)',
     medium: 'Acrylic and resin on wood',
@@ -112,11 +112,11 @@ var art_list = [
     year: '2021'
   },
   {
-    filename: 'Naomi_Basu_Nayikows_2021.jpeg',
-    title: 'Nayikows',
-    medium: 'Embroidery on raw silk sari',
-    dimensions: '9 x 26 inches',
-    year: '2021'
+    filename: 'Naomi_Basu_SkyDancer_2022.jpeg',
+    title: 'Sky Dancer',
+    medium: 'Acrylic on canvas',
+    dimensions: '28 x 28 inches',
+    year: '2022'
   },
 ];
 
