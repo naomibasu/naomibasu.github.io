@@ -33,6 +33,13 @@ var art_list = [
     dimensions: '11.7 x 16.5 inches (A3)',
     year: '2024'
   },
+  // {
+  //   filename: 'Naomi_Basu_TheDairy_2024.jpeg',
+  //   title: 'The Dairy',
+  //   medium: 'Silk embroidery and image transfer on muslin',
+  //   dimensions: '14 x 18 inches',
+  //   year: '2024'
+  // },
   {
     filename: 'Naomi_Basu_Vyagra_2024.jpeg',
     title: 'Vyagra',
