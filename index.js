@@ -16,7 +16,7 @@ var art_list = [
     filename: 'Naomi_Basu_Zoetrope_2024.GIF',
     title: 'Bhavacakra Remix (Zoetrope)',
     medium: 'Acrylic and sumi ink on canvas',
-    dimensions: 'N/A',
+    dimensions: 'https://www.youtube.com/watch?v=0Q4LIiA_eFg',
     year: '2024'
   },
   {
@@ -213,7 +213,7 @@ function load_art() {
     var link = document.getElementById('content').appendChild(document.createElement('a'));
     link.setAttribute('href', artDirectory + a.filename);
     link.setAttribute('data-lightbox', "thismakesitwork");
-    link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions}<br>${a.year}`);
+    link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions ?? "N/A"}<br>${a.year}`);
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
