@@ -8,28 +8,28 @@ var art_list = [
   {
     filename: 'Naomi_Basu_BhavacakraRemix_2024.jpeg',
     title: 'Bhavacakra Remix',
-    medium: 'Acrylic, indigo, soft pastel, sumi ink, sequins, ash, gold leaf on canvas',
+    medium: 'Acrylic, indigo, pastel, sumi ink, sequins, ash, gold leaf on canvas',
     dimensions: '30 x 40 inches',
     year: '2024'
   },
   {
     filename: 'Naomi_Basu_Zoetrope_2024.GIF',
     title: 'Bhavacakra Remix (Zoetrope)',
-    medium: 'Acrylic and sumi ink on canvas',
+    medium: 'Vinyl record',
     dimensions: 'https://www.youtube.com/watch?v=0Q4LIiA_eFg',
     year: '2024'
   },
   {
     filename: 'Naomi_Basu_FlannelSoul_2024.jpeg',
     title: 'Flannel Soul',
-    medium: 'Marker, color pencil, indigo, embroidery, iridescent pigment, and silver leaf on tea-stained cotton rag',
+    medium: 'Marker, pastel, indigo, embroidery, iridescent pigment, and silver leaf on tea-stained cotton',
     dimensions:'11.7 x 16.5 inches (A3)',
     year: '2024'
   },
   {
     filename: 'Naomi_Basu_Kamadhenu_2024.jpeg',
     title: 'Kāmadhenu',
-    medium: 'Marker, sumi ink, color pencil, and soft pastel on tea-stained cotton rag',
+    medium: 'Marker, sumi ink, color pencil, and soft pastel on tea-stained cotton',
     dimensions: '11.7 x 16.5 inches (A3)',
     year: '2024'
   },
