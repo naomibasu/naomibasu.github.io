@@ -185,6 +185,42 @@ function clearElement(id) {
 
 
 // LOAD PAGES
+function load_about() {
+  if (pageTitle == "About") {
+    return;
+  }
+  
+  // bio
+  var content = document.getElementById('content');
+  var title = content.appendChild(document.createElement('h1'));
+  title.innerHTML = "About";
+  var bio = content.appendChild(document.createElement('p'));
+  bio.setAttribute('class', 'p1');
+  bio.innerHTML = "Naomi Basu (b. New Delhi) is a contemporary painter who studied traditional Thangka painting techniques under the Tibetan master painter, Pema Rinzin. Her work has been exhibited at galleries in New York City including Kate Oh Gallery, Neighbors Gallery, and Flat Rate Contemporary, auctioned at See You Next Thursday and Taos Abstract Artist Collective, and featured in Hyperallergic. Outside of exhibiting, she works to promote emerging artists with her curatorial collective, Immaterial Projects.";
+  
+  // statement
+  var statement = content.appendChild(document.createElement('p'));
+  statement.setAttribute('class', 'p1')
+  statement.innerHTML = "Naomi Basu's work centers around the Vedic metaphor of Indra’s Net—the theory that, like an infinite net of jewels that reflect each other, all phenomena are interconnected. She begins with a Tantric artifact, such as a cosmological diagram, and playfully enmeshes the object’s iconography with parallel motifs from digital worlds and personal experiences. The result is a prismatic, maximalist painting or embroidery that intersects multiple timeframes and cultures. In creating these new interpretations, she explores how visual ideas echo across time and space, unifying vastly different contexts.";
+
+  // cv
+  var cvDiv = content.appendChild(document.createElement('p'));
+  cvDiv.setAttribute('class', 'p1');
+  var cvLink = cvDiv.appendChild(document.createElement('a'));
+  cvLink.setAttribute('target', '_blank');
+  var linkText = cvLink.appendChild(document.createElement('p'));
+  linkText.innerHTML = "Artist CV";
+  linkText.setAttribute('href', 'naomi-basu-artist-cv.pdf');
+  linkText.setAttribute('style', 'text-decoration:underline');
+  linkText.setAttribute('class', 'fade');
+
+  // // embedded pdf
+  // var cv = cvDiv.appendChild(document.createElement('iframe'));
+  // cv.setAttribute('class', 'pdf')
+  // cv.setAttribute('src', 'naomi-basu-artist-cv.pdf');
+
+}
+
 function load_tech() {
   if (pageTitle == "Tech") {
     return;

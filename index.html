@@ -14,7 +14,8 @@
   <body>
     <nav>
       <ul>
-        <li><a title="About" id="about" href="naomi-basu-artist-cv.pdf" target="_blank"><img class="fade" src="icons/about.png"/></a></li>
+        <!-- <li><a title="About" id="about" href="naomi-basu-artist-cv.pdf" target="_blank"><img class="fade" src="icons/about.png"/></a></li> -->
+        <li><a title="About" id="about" onclick="setPage('About')" target="_blank"><img class="fade" src="icons/about.png"/></a></li>
         <li><a title="Art" id="art" onclick="setPage('Art')"><img class="fade" src="icons/art.png"/></a></li>
         <li><img src="icons/logoicon.png"/></li>
         <li><a title="Instagram" id="instagram" href="https://www.instagram.com/naomi.basu/" target="_blank"><img class="fade" src="icons/instagram.png"/></a></li>
@@ -27,7 +28,11 @@
       // Get requestedPage from storage
       (function () {
           requestedPage = window.localStorage.getItem("requestedPage");
-          if (requestedPage == 'Tech') {
+          if (requestedPage == 'About') {
+            load_about();
+            window.localStorage.setItem("requestedPage", "");
+          }
+          else if (requestedPage == 'Tech') {
             load_tech();
             window.localStorage.setItem("requestedPage", "");
           }
