@@ -210,7 +210,7 @@ function load_about() {
   cvLink.setAttribute('target', '_blank');
   var linkText = cvLink.appendChild(document.createElement('p'));
   linkText.innerHTML = "Artist CV";
-  linkText.setAttribute('href', 'naomi-basu-artist-cv.pdf');
+  cvLink.setAttribute('href', 'naomi-basu-artist-cv.pdf');
   linkText.setAttribute('style', 'text-decoration:underline');
   linkText.setAttribute('class', 'fade');
 
