@@ -219,6 +219,11 @@ function load_about() {
   // cv.setAttribute('class', 'pdf')
   // cv.setAttribute('src', 'naomi-basu-artist-cv.pdf');
 
+  // var logo_p = cvDiv.appendChild(document.createElement('p'));
+  // logo_p.setAttribute('class', 'centerImage');
+  // var logo = logo_p.appendChild(document.createElement('img'))
+  // logo.setAttribute('src', 'logoicon.png');
+  // logo.setAttribute('id', 'logo');
 }
 
 function load_tech() {
@@ -237,7 +242,7 @@ function load_tech() {
     image.setAttribute('alt', 'Naomi Basu');
     image.setAttribute('src', 'projectPages/' + project_dict[element]);
   }
-  setTimeout(setupBlocks, 300);
+  setTimeout(setupBlocks, 400);
 } 
 
 function load_art() {
