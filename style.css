@@ -16,10 +16,6 @@ ul {
   text-align: center;
 }
 
-#logoicon {
-  width: 120px;
-}
-
 /* #logo {
   width: 200px;
 } */
@@ -37,20 +33,21 @@ nav {
   left: -3%;
 
   @media only screen and (max-width: 700px) {
-      li {
-        display: block;
-        text-align: center;
-        margin-bottom:30px;
+    li {
+      display: block;
+      text-align: center;
+      margin-bottom:30px;
 
       img {
         width: 24px;
       }
+    }
 
-      #logoicon {
-        width: 40px;
-      }
-    } 
-  }
+    #logoicon {
+      width: 40px;
+    }
+  } 
+  
 
   @media only screen and (min-width: 700px) {  
     li {
@@ -58,8 +55,11 @@ nav {
       text-align: center;
       margin-bottom: 30%;
     }
-  }
 
+    #logoicon {
+      width: 120px;
+    }
+  }
 }
 
 a {
