@@ -196,12 +196,12 @@ function load_about() {
   title.innerHTML = "About";
   var bio = content.appendChild(document.createElement('p'));
   bio.setAttribute('class', 'p1');
-  bio.innerHTML = "Naomi Basu (b. New Delhi) is a contemporary painter who studied traditional Thangka painting techniques under the Tibetan master painter, Pema Rinzin. Her work has been exhibited at galleries in New York City including Kate Oh Gallery, Neighbors Gallery, and Flat Rate Contemporary, auctioned at See You Next Thursday and Taos Abstract Artist Collective, and featured in Hyperallergic. Outside of exhibiting, she works to promote emerging artists with her curatorial collective, Immaterial Projects.";
+  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York-based artist who works across painting, embroidery, and animation. She studied traditional Thangka painting techniques under the Tibetan master painter, Pema Rinzin, for several years. Her work has been exhibited at galleries including Kate Oh Gallery, Neighbors Gallery, and Flat Rate Contemporary, auctioned at See You Next Thursday and Taos Abstract Artist Collective, and featured in Hyperallergic. Outside of exhibiting, she promotes emerging artists with her curatorial collective, Immaterial Projects.";
   
   // statement
   var statement = content.appendChild(document.createElement('p'));
   statement.setAttribute('class', 'p1')
-  statement.innerHTML = "Naomi Basu's work centers around the Vedic metaphor of Indra’s Net—the theory that, like an infinite net of jewels that reflect each other, all phenomena are interconnected. She begins with a Tantric artifact, such as a cosmological diagram, and playfully enmeshes the object’s iconography with parallel motifs from digital worlds and personal experiences. The result is a prismatic, maximalist painting or embroidery that intersects multiple timeframes and cultures. In creating these new interpretations, she explores how visual ideas echo across time and space, unifying vastly different contexts.";
+  statement.innerHTML = "Naomi Basu's work centers around the Vedic metaphor of Indra’s Net—the theory that, like an infinite net of jewels that reflect each other, all phenomena are interconnected. She begins with a Tantric artifact, such as a cosmological diagram, and playfully enmeshes its iconography with parallel motifs from 2000s-era digital graphics and personal experiences. The result is a maximalist multimedia work that intersects multiple timeframes and cultures. In creating these pieces, she explores how visual ideas recur across time and space, unifying vastly different contexts.";
 
   // cv
   var cvDiv = content.appendChild(document.createElement('p'));
@@ -230,6 +230,7 @@ function load_tech() {
   for (const element of project_names) {
     var link = document.getElementById('content').appendChild(document.createElement('a'));
     link.setAttribute('href', 'projectPages/' + element);
+    link.setAttribute('target', '_blank');
     var figure = link.appendChild(document.createElement('figure'));
     var image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
