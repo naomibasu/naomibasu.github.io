@@ -16,6 +16,19 @@ ul {
   text-align: center;
 }
 
+#logoicon {
+  width: 120px;
+}
+
+/* #logo {
+  width: 200px;
+} */
+
+.centerImage {
+  text-align: center;
+  width: 100%
+}
+
 nav {
   position: fixed;
   height: 100px;
@@ -25,12 +38,16 @@ nav {
 
   @media only screen and (max-width: 700px) {
       li {
-      display: block;
-      text-align: center;
-      margin-bottom:30px;
+        display: block;
+        text-align: center;
+        margin-bottom:30px;
 
       img {
         width: 24px;
+      }
+
+      #logoicon {
+        width: 40px;
       }
     } 
   }
