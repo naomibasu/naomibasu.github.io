@@ -201,7 +201,7 @@ function load_about() {
   // statement
   var statement = content.appendChild(document.createElement('p'));
   statement.setAttribute('class', 'p1')
-  statement.innerHTML = "Naomi Basu's work centers around the Vedic metaphor of Indra’s Net—the theory that, like an infinite net of jewels that reflect each other, all phenomena are interconnected. She begins with a Tantric artifact, such as a cosmological diagram, and playfully enmeshes its iconography with parallel motifs from 2000s-era digital graphics and personal experiences. The result is a maximalist multimedia work that intersects multiple timeframes and cultures. In creating these pieces, she explores how visual ideas recur across time and space, unifying vastly different contexts.";
+  statement.innerHTML = "Naomi Basu's work centers around the Vedic metaphor of Indra’s Net—an infinite web of jewels reflecting one another, illustrating how all things are interconnected. She starts with a Tantric artifact, such as a cosmological diagram, and playfully enmeshes its iconography with parallel motifs from 2000s-era digital graphics and personal experiences. The result tends to be a vibrant composition that intersects multiple timeframes and cultures. In creating these pieces, she explores how visual ideas recur across time and space, unifying vastly different contexts.";
 
   // cv
   var cvDiv = content.appendChild(document.createElement('p'));
