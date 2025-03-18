@@ -20,6 +20,13 @@ var art_list = [
     year: '2024'
   },
   {
+    filename: 'Naomi_Basu_TantricRecursion_2025.jpeg',
+    title: 'Tantric Recursion',
+    medium: 'Acrylic, pastel, and sumi ink on wood',
+    dimensions: '20 x 24 inches',
+    year: '2025'
+  },
+  {
     filename: 'Naomi_Basu_FlannelSoul_2024.jpeg',
     title: 'Flannel Soul',
     medium: 'Marker, pastel, indigo, embroidery, iridescent pigment, and silver leaf on tea-stained cotton',
@@ -34,12 +41,26 @@ var art_list = [
     year: '2024'
   },
   // {
-  //   filename: 'Naomi_Basu_TheDairy_2024.jpeg',
-  //   title: 'The Dairy',
-  //   medium: 'Silk embroidery and image transfer on muslin',
-  //   dimensions: '14 x 18 inches',
-  //   year: '2024'
+  //   filename: 'Naomi_Basu_OnceInAMoonBalloon_2025.jpeg',
+  //   title: 'Once in a Moon Balloon',
+  //   medium: 'Color pencil on vellum',
+  //   dimensions: '6 x 8 inches',
+  //   year: '2025'
   // },
+  // {
+  //   filename: 'Naomi_Basu_MantraSeed_2025.jpeg',
+  //   title: 'Mantra Seed',
+  //   medium: 'Color pencil on vellum',
+  //   dimensions: '6 x 8 inches',
+  //   year: '2025'
+  // },
+  {
+    filename: 'Naomi_Basu_TheDairy_2024.jpeg',
+    title: 'The Dairy',
+    medium: 'Silk embroidery and image transfer on muslin',
+    dimensions: '14 x 18 inches',
+    year: '2024'
+  },
   {
     filename: 'Naomi_Basu_Vyagra_2024.jpeg',
     title: 'Vyagra',
@@ -55,18 +76,18 @@ var art_list = [
     year: '2022'
   },
   {
-    filename: 'Naomi_Basu_Milk_Bath_2023.jpeg',
-    title: 'Milk Bath',
-    medium: 'Oil and muslin on unstretched canvas',
-    dimensions: '36 x 42 inches',
-    year: '2023'
-  },
-  {
     filename: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
     title: 'Born in a Lake of Tears',
     medium: 'Acrylic and recycled sari on unstretched canvas',
     dimensions: '37.5 x 42 inches',
     year: '2022'
+  },
+  {
+    filename: 'Naomi_Basu_Milk_Bath_2023.jpeg',
+    title: 'Milk Bath',
+    medium: 'Oil and muslin on unstretched canvas',
+    dimensions: '36 x 42 inches',
+    year: '2023'
   },
   {
     filename: 'Naomi_Basu_Bushido_2023.jpeg',
@@ -112,7 +133,6 @@ var art_list = [
   },
   {
     filename: 'Naomi_Basu_DawonII_2021.jpeg',
-    minImage: 'Naomi_Basu_DawonII_2021.jpeg',
     title: 'Dawon (II)',
     medium: 'Acrylic and resin on wood',
     dimensions: '17 x 17 inches',
