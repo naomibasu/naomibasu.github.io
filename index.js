@@ -262,7 +262,7 @@ function load_tech() {
     image.setAttribute('alt', 'Naomi Basu');
     image.setAttribute('src', 'projectPages/' + project_dict[element]);
   }
-  setTimeout(setupBlocks, 400);
+  setTimeout(setupBlocks, 450);
 } 
 
 function load_art() {
@@ -282,6 +282,6 @@ function load_art() {
     image.setAttribute('alt', a['full-image'])
     image.setAttribute('src', thumbnailDirectory + a.filename);
   }
-  setTimeout(setupBlocks, 300);
+  setTimeout(setupBlocks, 450);
 }
 
