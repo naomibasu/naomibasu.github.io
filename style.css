@@ -16,10 +16,6 @@ ul {
   text-align: center;
 }
 
-/* #logo {
-  width: 200px;
-} */
-
 .centerImage {
   text-align: center;
   width: 100%
@@ -59,6 +55,10 @@ nav {
     #logoicon {
       width: 120px;
     }
+
+    #tech {
+      margin-left: 8px;
+    }
   }
 }
 
@@ -95,13 +95,6 @@ h1 {
   text-align: justify;
 }
 
-/*.pdf {
-  margin-top: 3%;
-  width: 800px;
-  height: 1000px;
-  margin-left: 12%;
-}*/
-
 
 @media only screen and (max-width: 700px) {
   .block {
@@ -132,12 +125,6 @@ h1 {
   #video {
     width: 280px;
   }
-
-/*  .pdf {
-    margin-top: 3%;
-    width: 250px;
-    height: 350px;
-  }*/
 }
 
 @media only screen and (min-width: 700px) {
