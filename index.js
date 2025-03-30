@@ -224,15 +224,14 @@ function load_about() {
   statement.innerHTML = "Naomi Basu's work centers around the Vedic metaphor of Indra’s Net—an infinite web of jewels reflecting one another, illustrating how all things are interconnected. She starts with a Tantric artifact, such as a cosmological diagram, and playfully enmeshes its iconography with parallel motifs from 2000s-era digital graphics and personal experiences. The result tends to be a vibrant composition that intersects multiple timeframes and cultures. In creating these pieces, she explores how visual ideas recur across time and space, unifying vastly different contexts.";
 
   // cv
-  var cvDiv = content.appendChild(document.createElement('p'));
-  cvDiv.setAttribute('class', 'p1');
-  var cvLink = cvDiv.appendChild(document.createElement('a'));
+  var linkText = content.appendChild(document.createElement('p'));
+  linkText.setAttribute('class', 'p1');
+  var cvLink = linkText.appendChild(document.createElement('a'));
   cvLink.setAttribute('target', '_blank');
-  var linkText = cvLink.appendChild(document.createElement('p'));
-  linkText.innerHTML = "Artist CV";
+  cvLink.innerHTML = "Artist CV";
   cvLink.setAttribute('href', 'naomi-basu-artist-cv.pdf');
-  linkText.setAttribute('style', 'text-decoration:underline');
-  linkText.setAttribute('class', 'fade');
+  cvLink.setAttribute('style', 'text-decoration:underline');
+  cvLink.setAttribute('class', 'fade');
 
   // newsletter subscribe
   var newsletterText = content.appendChild(document.createElement('p'));
