@@ -234,16 +234,15 @@ function load_about() {
   linkText.setAttribute('style', 'text-decoration:underline');
   linkText.setAttribute('class', 'fade');
 
-  // // embedded pdf
-  // var cv = cvDiv.appendChild(document.createElement('iframe'));
-  // cv.setAttribute('class', 'pdf')
-  // cv.setAttribute('src', 'naomi-basu-artist-cv.pdf');
-
-  // var logo_p = cvDiv.appendChild(document.createElement('p'));
-  // logo_p.setAttribute('class', 'centerImage');
-  // var logo = logo_p.appendChild(document.createElement('img'))
-  // logo.setAttribute('src', 'logoicon.png');
-  // logo.setAttribute('id', 'logo');
+  // newsletter subscribe
+  var newsletterText = content.appendChild(document.createElement('p'));
+  newsletterText.setAttribute('class', 'p1');
+  var newsletterLink = newsletterText.appendChild(document.createElement('a'));
+  newsletterLink.setAttribute('target', '_blank');
+  newsletterLink.innerHTML = "Mailing List";
+  newsletterLink.setAttribute('href', 'https://naomibasu.substack.com/subscribe?utm_source=substack&utm_medium=web&utm_content=embedded-post');
+  newsletterLink.setAttribute('style', 'text-decoration:underline');
+  newsletterLink.setAttribute('class', 'fade');
 }
 
 function load_tech() {
