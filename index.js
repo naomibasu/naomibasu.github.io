@@ -216,7 +216,7 @@ function load_about() {
   title.innerHTML = "About";
   var bio = content.appendChild(document.createElement('p'));
   bio.setAttribute('class', 'p1');
-  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York-based artist who works across painting, embroidery, and animation. She studied traditional Thangka techniques for several years under the Tibetan master painter, Pema Rinzin. Her work has been exhibited at galleries including Kate Oh Gallery, Visionary Projects, Neighbors Gallery, and Flat Rate Contemporary, auctioned at See You Next Thursday and Taos Abstract Artist Collective, and featured in Hyperallergic. Outside of exhibiting, she promotes emerging artists with her curatorial collective, Immaterial Projects.";
+  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York-based artist who works across painting, embroidery, and animation. Her practice is rooted in traditional Thangka techniques, having studied for several years under the Tibetan master painter, Pema Rinzin. Her work has been exhibited at galleries including Kate Oh Gallery, Visionary Projects, Neighbors Gallery, and Flat Rate Contemporary, auctioned at See You Next Thursday and Taos Abstract Artist Collective, and featured in Hyperallergic. Outside of exhibiting, she promotes emerging artists with her curatorial collective, Immaterial Projects.";
   
   // statement
   var statement = content.appendChild(document.createElement('p'));
