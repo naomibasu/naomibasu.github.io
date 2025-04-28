@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" href="lightbox.css">
     <title>Naomi Basu</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-  <head>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="index.js" defer></script>
+  </head>
 
   <body>
     <nav>
@@ -23,27 +24,7 @@
     </nav>
 
     <div id="content">
-      <script>
-      // Get requestedPage from storage
-      (function () {
-          requestedPage = window.localStorage.getItem("requestedPage");
-          if (requestedPage == 'About') {
-            load_about();
-            window.localStorage.setItem("requestedPage", "");
-          }
-          else if (requestedPage == 'Tech') {
-            load_tech();
-            window.localStorage.setItem("requestedPage", "");
-          }
-          else {
-            load_art();
-            window.localStorage.setItem("requestedPage", "");
-          }
-      }(window));
-       
-      $(window).resize(setupBlocks);
-      </script> 
     </div>
     <script type="text/javascript" src="lightbox-plus-jquery.js"></script>
-  </body> 
+  </body>
 </html>

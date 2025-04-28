@@ -40,20 +40,6 @@ var art_list = [
     dimensions: '11.7 x 16.5 inches (A3)',
     year: '2024'
   },
-  // {
-  //   filename: 'Naomi_Basu_OnceInAMoonBalloon_2025.jpeg',
-  //   title: 'Once in a Moon Balloon',
-  //   medium: 'Color pencil on vellum',
-  //   dimensions: '6 x 8 inches',
-  //   year: '2025'
-  // },
-  // {
-  //   filename: 'Naomi_Basu_MantraSeed_2025.jpeg',
-  //   title: 'Mantra Seed',
-  //   medium: 'Color pencil on vellum',
-  //   dimensions: '6 x 8 inches',
-  //   year: '2025'
-  // },
   {
     filename: 'Naomi_Basu_TheDairy_2024.jpeg',
     title: 'The Dairy',
@@ -168,6 +154,7 @@ var margin = 25;
 var windowWidth = 0;
 var blocks = [];  
 
+
 function setupBlocks() {
   windowWidth = $(window).width();
   colWidth = $('.block').outerWidth();
@@ -179,6 +166,7 @@ function setupBlocks() {
   }
   positionBlocks();
 }
+
 
 function positionBlocks() {
   $('.block').each(function(){
@@ -194,9 +182,11 @@ function positionBlocks() {
   }); 
 }
 
+
 Array.min = function(array) {
   return Math.min.apply(Math, array);
 };
+
 
 // Remove all content within an element
 function clearElement(id) {
@@ -244,6 +234,7 @@ function load_about() {
   newsletterLink.setAttribute('class', 'fade');
 }
 
+
 function load_tech() {
   if (pageTitle == "Tech") {
     return;
@@ -251,17 +242,29 @@ function load_tech() {
   clearElement('content');
 
   for (const element of project_names) {
-    var link = document.getElementById('content').appendChild(document.createElement('a'));
+    const link = document.getElementById('content').appendChild(document.createElement('a'));
     link.setAttribute('href', 'projectPages/' + element);
     link.setAttribute('target', '_blank');
-    var figure = link.appendChild(document.createElement('figure'));
-    var image = figure.appendChild(document.createElement('img'));
+
+    const figure = link.appendChild(document.createElement('figure'));
+    const image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
     image.setAttribute('alt', 'Naomi Basu');
     image.setAttribute('src', 'projectPages/' + project_dict[element]);
+    image.setAttribute('loading', 'lazy');
   }
-  setTimeout(setupBlocks, 450);
-} 
+
+  // Layout images only after all of them have loaded
+  imagesLoaded('#content', { background: false }, function () {
+    setupBlocks();
+
+    // Fade in after layout
+    document.querySelectorAll('.block').forEach((el) => {
+      el.classList.add('loaded');
+    });
+  });
+}
+
 
 function load_art() {
   if (pageTitle == "Art") {
@@ -270,16 +273,44 @@ function load_art() {
   clearElement('content');
 
   for (const a of art_list) {
-    var link = document.getElementById('content').appendChild(document.createElement('a'));
+    const link = document.getElementById('content').appendChild(document.createElement('a'));
     link.setAttribute('href', artDirectory + a.filename);
     link.setAttribute('data-lightbox', "thismakesitwork");
     link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions ?? "N/A"}<br>${a.year}`);
-    var figure = link.appendChild(document.createElement('figure'));
-    var image = figure.appendChild(document.createElement('img'));
+
+    const figure = link.appendChild(document.createElement('figure'));
+    const image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
-    image.setAttribute('alt', a['full-image'])
+    image.setAttribute('alt', a.title); // fallback for alt
     image.setAttribute('src', thumbnailDirectory + a.filename);
+    image.setAttribute('loading', 'lazy');
   }
-  setTimeout(setupBlocks, 450);
+
+  // Wait for all images to load
+  imagesLoaded('#content', { background: false }, function () {
+    setupBlocks();
+
+    // Fade in after layout
+    document.querySelectorAll('.block').forEach((el) => {
+      el.classList.add('loaded');
+    });
+  });
 }
 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const requestedPage = window.localStorage.getItem("requestedPage");
+
+  if (requestedPage === "About") {
+    load_about();
+  } else if (requestedPage === "Tech") {
+    load_tech();
+  } else {
+    load_art();
+  }
+
+  window.localStorage.setItem("requestedPage", "");
+
+  $(window).resize(setupBlocks);
+});
