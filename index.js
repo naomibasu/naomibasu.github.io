@@ -232,6 +232,15 @@ function load_about() {
   newsletterLink.setAttribute('href', 'https://naomibasu.substack.com/subscribe?utm_source=substack&utm_medium=web&utm_content=embedded-post');
   newsletterLink.setAttribute('style', 'text-decoration:underline');
   newsletterLink.setAttribute('class', 'fade');
+
+  // Fade in all .p1 and h1 elements after a short delay
+  setTimeout(() => {
+    document.querySelectorAll('.p1, h1').forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('fade-in');
+      }, index * 100); // stagger effect
+    });
+  }, 50);
 }
 
 
