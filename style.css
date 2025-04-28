@@ -69,14 +69,10 @@ a {
 
 .fade {
  opacity: 1;
- transition: opacity .25s ease-in-out;
+ transition: opacity .15s ease-in-out;
  -moz-transition: opacity .15s ease-in-out;
  -webkit-transition: opacity .15s ease-in-out;
  cursor: pointer;
-}
-
-.fade:hover {
-  opacity: 0.5;
 }
 
 h1 {
@@ -95,12 +91,22 @@ h1 {
   text-align: justify;
 }
 
-.block.loaded {
-  opacity: 1;
-  transform: translateY(0); /* slide up into place */
+/* Entrance (slow) */
+.block {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.8s ease-in, transform 0.8s ease-in;
 }
 
+/* When loaded, fade in + slide up */
+.block.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* On hover: override transition for just that moment */
 .block.fade:hover {
+  transition: opacity 0.2s ease-in-out; /* <- only applies when hovered */
   opacity: 0.5;
 }
 
@@ -111,8 +117,6 @@ h1 {
     padding: 10px;
     width: 200px;
     opacity: 0;
-    transform: translateY(7.5px);
-    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
   }
 
   h1 {
@@ -145,8 +149,6 @@ h1 {
     padding: 20px;
     width: 260px;
     opacity: 0;
-    transform: translateY(7.5px);
-    transition: opacity 0.8s ease-in, transform 0.8s ease-in;
   }
 
   p img {

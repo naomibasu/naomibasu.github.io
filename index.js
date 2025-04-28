@@ -258,9 +258,11 @@ function load_tech() {
   imagesLoaded('#content', { background: false }, function () {
     setupBlocks();
 
-    // Fade in after layout
-    document.querySelectorAll('.block').forEach((el) => {
-      el.classList.add('loaded');
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('loaded');
+      }, index * 100); // delay each by 100ms
     });
   });
 }
@@ -290,9 +292,11 @@ function load_art() {
   imagesLoaded('#content', { background: false }, function () {
     setupBlocks();
 
-    // Fade in after layout
-    document.querySelectorAll('.block').forEach((el) => {
-      el.classList.add('loaded');
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('loaded');
+      }, index * 100); // delay each by 100ms
     });
   });
 }
