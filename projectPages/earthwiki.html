@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="../index.js"></script>
-  <head>
+  </head>
 
   <body>
     <div>
@@ -16,15 +16,28 @@
       <p class="p1">
         In 2017, I used Unity to build a "Geographic Wikipedia" prototype within Google EarthVR. This prototype enables users to learn more about the cities and neighborhoods they explore in-app.
       </p>
-
-      <p class="p1">
-        Below is a GIF of a user exploring various neighborhoods in San Francisco.
-      </p>
       
-      <p class="p1">
-        <img src="epgifs/earthWiki.gif" 
-          title="VR Earth Wikipedia" alt="">
-      </p>
+      <div class="gif-row fade-target">
+        <div class="gif-caption">
+          <p>Below is a GIF of a user exploring various neighborhoods in San Francisco.</p>
+          <img src="epgifs/earthWiki.gif" title="VR Earth Wikipedia" alt="">
+        </div>
+      </div>
+      
     </div>
+
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.p1, h1').forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add('fade-in');
+          }, index * 100);
+        });
+    
+        setTimeout(() => {
+          document.querySelector('.gif-row')?.classList.add('fade-in');
+        }, 500);
+      });
+    </script>
   </body> 
 </html>

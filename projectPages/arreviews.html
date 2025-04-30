@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="../index.js"></script>
-  <head>
+  </head>
 
   <body>
     <div>
@@ -17,21 +17,31 @@
         In 2018, I used Unity, GPS, and Google Cloud Anchors to build an Augmented Reality prototype for users to quickly view and contribute to general customer sentiment for businesses within Google Street View.
       </p>
 
-      <p class="p1">
-        Discovering reviews in NYC's Chelsea neighborhood:
-        <br><br>
-        <img src="epgifs/discovery.gif" 
-          title="AR Review Discovery" width="45%" alt="">
-      </p>
-      <p class="p1">
-        Leaving a review for Pad Thai Noodle Lounge in NYC:
-        <br><br>
-        <img src="epgifs/creation.gif" 
-          title="AR Review Creation" width="45%" alt="">    
-        </img>
-      </p>
+      <div class="gif-row fade-target">
+        <div class="gif-caption">
+          <p>Discovering reviews in NYC's Chelsea neighborhood:</p>
+          <img src="epgifs/discovery.gif" title="AR Review Discovery" alt="">
+        </div>
+        <div class="gif-caption">
+          <p>Leaving a review for Pad Thai Noodle Lounge in NYC:</p>
+          <img src="epgifs/creation.gif" title="AR Review Creation" alt="">
+        </div>
+      </div>
+    </div>  
 
-    </div>
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.p1, h1').forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add('fade-in');
+          }, index * 100);
+        });
 
+        // fade in the gif row separately
+        setTimeout(() => {
+          document.querySelector('.gif-row')?.classList.add('fade-in');
+        }, 500); // adjust delay as desired
+      });
+    </script>
   </body> 
 </html>

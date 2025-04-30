@@ -152,6 +152,8 @@ h1.fade-in,
 
   #video {
     width: 280px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -168,4 +170,68 @@ h1.fade-in,
     width: 600px;
     margin-left: 15%;
   }
+
+  #video {
+    width: 100%;
+    max-width: 600px;
+    height: 340px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 16px;
+  max-width: 600px;
+  margin: 40px auto 0 auto; /* top margin added */
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.gif-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gif-grid.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Wrapper for gif(s), including fade-in effect and spacing */
+.gif-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;              /* spacing between items if more than one */
+  margin-top: 40px;       /* space above the gif section */
+  opacity: 0;             /* hidden by default */
+  transform: translateY(10px); /* slight drop for entrance effect */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When JS adds this class, the gif section fades in and slides up */
+.gif-row.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Individual gif + caption wrapper */
+.gif-caption {
+  flex: 1 1 300px;        /* responsive sizing */
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Styling for the gif itself */
+.gif-caption img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 8px;
 }

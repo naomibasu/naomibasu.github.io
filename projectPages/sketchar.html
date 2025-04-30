@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="../index.js"></script>
-  <head>
+  </head>
 
   <body>
     <div>
@@ -16,14 +16,48 @@
       <p class="p1">
         SketchAR is a mobile app that allows you to paint/sculpt in 3D with Augmented Reality.
         It has 4 modes for painting, navigating, saving viewpoints and accessing instructions respectively.
-        <br/><br/><br/>
+        <br><br>
         It was built with Unity3D and Vuforia, and can be used with a couple of printable A4 image targets and a soda can.
       </p>
       
       <p class="p1">
-        Watch the Demo Video: <br/> <br/> 
-        <iframe id="video" width="500" height="280" src="https://www.youtube.com/embed/Q1BBAQAwtrc" frameborder="0" align="middle" allowfullscreen></iframe>
+        Watch the Demo Video:
       </p>
+      
+      <div class="video-container fade-target">
+        <iframe
+          id="video"
+          src="https://www.youtube.com/embed/Q1BBAQAwtrc"
+          frameborder="0"
+          allowfullscreen
+          title="SketchAR Demo"
+        ></iframe>
+      </div>
     </div>
-  </body> 
+  
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.p1, h1').forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add('fade-in');
+          }, index * 100);
+        });
+  
+        setTimeout(() => {
+          document.querySelector('.video-container')?.classList.add('fade-in');
+        }, 400);
+      });
+    </script>
+  </body>
+  
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.p1, h1').forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('fade-in');
+        }, index * 100);
+      });
+    });
+  </script>
 </html>
