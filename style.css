@@ -11,15 +11,17 @@ body {
   color: #6b6b6b;
 }
 
-ul {
-  padding-left: 0;
+ul, nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   text-align: center;
 }
 
-.centerImage {
+/* .centerImage {
   text-align: center;
-  width: 100%
-}
+  width: 100%;
+} */
 
 nav {
   position: fixed;
@@ -27,39 +29,29 @@ nav {
   top: 14.5%;
   width: 20%;
   left: -3%;
+}
 
-  @media only screen and (max-width: 700px) {
-    li {
-      display: block;
-      text-align: center;
-      margin-bottom:30px;
+nav li {
+  display: block;
+  text-align: center;
+  margin-bottom: 30%;
+}
 
-      img {
-        width: 24px;
-      }
-    }
+#logoicon {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
-    #logoicon {
-      width: 40px;
-    }
-  } 
-  
+nav img {
+  /* width: 32px; */
+  height: auto;
+}
 
-  @media only screen and (min-width: 700px) {  
-    li {
-      display: block;
-      text-align: center;
-      margin-bottom: 30%;
-    }
-
-    #logoicon {
-      width: 120px;
-    }
-
-    #tech {
-      margin-left: 8px;
-    }
-  }
+#tech {
+  margin-left: 8px;
 }
 
 a {
@@ -68,11 +60,9 @@ a {
 }
 
 .fade {
- opacity: 1;
- transition: opacity .15s ease-in-out;
- -moz-transition: opacity .15s ease-in-out;
- -webkit-transition: opacity .15s ease-in-out;
- cursor: pointer;
+  opacity: 1;
+  transition: opacity .15s ease-in-out;
+  cursor: pointer;
 }
 
 h1 {
@@ -80,63 +70,65 @@ h1 {
   margin-top: 10vh;
   white-space: pre;
   font-size: 24px;
-}
-
-.p1 {
-  margin-top: 3%;
-  margin-left: 20%;
-  width: 60%;
-  word-spacing: 2.2px;
-/*  font-size: 0.95em;*/
-  text-align: justify;
-}
-
-h1,
-.p1 {
   opacity: 0;
   transform: translateY(5px);
   transition: opacity 0.6s ease-out, transform 0.8s ease-out;
 }
 
-h1.fade-in,
+h1.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.p1 {
+  margin: 3% auto;
+  width: 90%;
+  max-width: 600px;
+  word-spacing: 2.2px;
+  text-align: justify;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.6s ease-out, transform 0.8s ease-out;
+}
+
 .p1.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Entrance (slow) */
 .block {
   opacity: 0;
   transform: translateY(5px);
   transition: opacity 0.8s ease-in, transform 0.8s ease-in;
+  margin-left: 15%;
+  position: absolute;
+  padding: 20px;
+  width: 260px;
 }
 
-/* When loaded, fade in + slide up */
 .block.loaded {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* On hover: override transition for just that moment */
 .block.fade:hover {
-  transition: opacity 0.2s ease-in-out; /* <- only applies when hovered */
+  transition: opacity 0.2s ease-in-out;
   opacity: 0.5;
 }
 
 @media only screen and (max-width: 700px) {
   .block {
     margin-left: 20%;
-    position: absolute;
     padding: 10px;
     width: 200px;
-    opacity: 0;
   }
 
   h1 {
     margin-top: 6vh;
     font-size: 22px;
   }
-  
+
   .p1 {
     width: 260px;
     font-size: 12px;
@@ -144,34 +136,29 @@ h1.fade-in,
 
   p {
     font-size: 12px;
-
-    img {
-      width: 270px;
-    }
   }
 
-  #video {
-    width: 280px;
+  p img, #video {
+    width: 270px;
     display: block;
     margin: 0 auto;
+  }
+
+  nav img {
+    width: 20px;
+  }
+
+  #logoicon {
+    max-width: 45px;
+  }
+
+  #tech {
+    margin-left: 0;
   }
 }
 
 @media only screen and (min-width: 700px) {
-  .block {
-    margin-left: 15%;
-    position: absolute;
-    padding: 20px;
-    width: 260px;
-    opacity: 0;
-  }
-
-  p img {
-    width: 600px;
-    margin-left: 15%;
-  }
-
-  #video {
+  p img, #video {
     width: 100%;
     max-width: 600px;
     height: 340px;
@@ -182,10 +169,10 @@ h1.fade-in,
 
 .gif-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   max-width: 600px;
-  margin: 40px auto 0 auto; /* top margin added */
+  margin: 40px auto 0 auto;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -202,32 +189,28 @@ h1.fade-in,
   transform: translateY(0);
 }
 
-/* Wrapper for gif(s), including fade-in effect and spacing */
 .gif-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;              /* spacing between items if more than one */
-  margin-top: 40px;       /* space above the gif section */
-  opacity: 0;             /* hidden by default */
-  transform: translateY(10px); /* slight drop for entrance effect */
+  gap: 32px;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(10px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* When JS adds this class, the gif section fades in and slides up */
 .gif-row.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Individual gif + caption wrapper */
 .gif-caption {
-  flex: 1 1 300px;        /* responsive sizing */
+  flex: 1 1 300px;
   max-width: 600px;
   text-align: center;
 }
 
-/* Styling for the gif itself */
 .gif-caption img {
   max-width: 600px;
   width: 100%;
