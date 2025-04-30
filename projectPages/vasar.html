@@ -2,12 +2,11 @@
 <html lang="en">
   <head>
     <title>VasAR</title>
-    <meta charset = "utf-8">
-    <meta name = "viewport" content = "width=device-width" initial-scale="1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script type="text/javascript" src="../index.js"></script>
-  <head>
+  </head>
   <body>
     <div class="main">
       <h1>VasAR</h1>
@@ -17,21 +16,33 @@
 
         Many AR and VR task domains involve manipulating virtual objects; for example, to perform 3D geometric transformations. These operations are typically accomplished with tracked hands or hand-held controllers. However, there are some activities in which the user's hands are already busy with another task, requiring the user to temporarily stop what they are doing to perform the second task, while also taking time to disengage and reengage with the original task (e.g., putting down and picking up tools). To avoid the need to overload the user's hands this way in an AR system for guiding a physician performing a surgical procedure, we developed a hands-free approach to performing 3D transformations on patient-specific virtual organ models. Our approach uses small head motions to accomplish first-order and zero-order control, in conjunction with voice commands to establish the type of transformation.
       </p>  
+
       <p class="p1">
         To show the effectiveness of this approach for translating, scaling, and rotating 3D virtual models, we conducted a within-subject study comparing the hands-free approach with one based on conventional manual techniques, both running on a Microsoft HoloLens and using the same voice commands to specify transformation type. Independent of any additional time to transition between tasks, users were significantly faster overall using the hands-free approach, significantly faster for hands-free translation and scaling, and faster (although not significantly) for hands-free rotation. The paper was published in <a href="https://ieeexplore.ieee.org/abstract/document/8943734" target="_blank">IEEE</a>.
       </p>
 
-      <p class="p1">
-        <img src="vasAR/vasar.gif" 
-          width="100%" alt="">
-      </p>
-      <p class="p1">
-        <img src="vasAR/vasar-2.gif" 
-          width="100%" alt="">
-      </p>
-           
-
+      <div class="gif-row fade-target">
+        <div class="gif-caption">
+          <img src="vasAR/vasar.gif" title="VasAR demo" alt="VasAR demo gif">
+        </div>
+        <div class="gif-caption">
+          <img src="vasAR/vasar-2.gif" title="VasAR alternate view" alt="VasAR second gif">
+        </div>
+      </div>
     </div>
 
-  </body> 
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.p1, h1').forEach((el, index) => {
+          setTimeout(() => {
+            el.classList.add('fade-in');
+          }, index * 100);
+        });
+
+        setTimeout(() => {
+          document.querySelector('.gif-row')?.classList.add('fade-in');
+        }, 500);
+      });
+    </script>
+  </body>
 </html>

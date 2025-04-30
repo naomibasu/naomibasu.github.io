@@ -18,11 +18,6 @@ ul, nav ul {
   text-align: center;
 }
 
-/* .centerImage {
-  text-align: center;
-  width: 100%;
-} */
-
 nav {
   position: fixed;
   height: 100px;
@@ -82,8 +77,8 @@ h1.fade-in {
 
 .p1 {
   margin: 3% auto;
-  width: 90%;
-  max-width: 600px;
+  width: 60%;
+  max-width: 850px;
   word-spacing: 2.2px;
   text-align: justify;
   font-size: 15px;
