@@ -206,12 +206,12 @@ function load_about() {
   title.innerHTML = "About";
   var bio = content.appendChild(document.createElement('p'));
   bio.setAttribute('class', 'p1');
-  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York-based artist who works across painting, embroidery, and animation. Her practice is rooted in traditional Thangka techniques, having studied for several years under the Tibetan master painter, Pema Rinzin. Her work has been exhibited at Kate Oh Gallery, Visionary Projects, Neighbors Gallery, and Flat Rate Contemporary, auctioned at See You Next Thursday and Taos Abstract Artist Collective, and featured in Hyperallergic. She also works to promote emerging artists with her curatorial collective, Immaterial Projects.";
+  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York-based artist working across painting, embroidery, and animation. Her practice is rooted in traditional Thangka techniques, developed over several years of study with Tibetan master painter Pema Rinzin. Her work has been exhibited at venues including Kate Oh Gallery, Las Contemporary, and Visionary Projects, auctioned by See You Next Thursday, and featured in Hyperallergic. She also supports emerging artists through her curatorial collective, Immaterial Projects.";
   
   // statement
   var statement = content.appendChild(document.createElement('p'));
   statement.setAttribute('class', 'p1')
-  statement.innerHTML = "Naomi Basu's work centers around the Vedic metaphor of Indra’s Net—an infinite web of jewels reflecting one another, illustrating how all things are interconnected. She starts with a Tantric artifact, such as a cosmological diagram, and playfully enmeshes its iconography with parallel motifs from 2000s-era digital graphics and personal experiences. The result tends to be a vibrant composition that intersects multiple timeframes and cultures. In creating these pieces, she explores how visual ideas recur across time and space, unifying vastly different contexts.";
+  statement.innerHTML = "Naomi Basu’s work centers on the Vedic metaphor of Indra’s Net—an infinite web of jewels reflecting one another—illustrating how everything is interconnected. Beginning with a Tantric artifact, such as a cosmological diagram, she playfully weaves its iconography with 2000s-era digital motifs and personal memory. The result is often a vibrant composition that intersects multiple timeframes and cultures. Through this process, she traces how visual ideas echo across and link contexts separated by time and space.";
 
   // cv
   var linkText = content.appendChild(document.createElement('p'));
