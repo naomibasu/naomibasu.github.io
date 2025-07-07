@@ -60,7 +60,7 @@ a {
 
 .fade:hover {
   opacity: 0.6;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 h1 {
@@ -98,21 +98,23 @@ h1.fade-in {
 .block {
   opacity: 0;
   transform: translateY(5px);
-  transition: opacity 0.8s ease-in, transform 0.8s ease-in;
   margin-left: 15%;
   position: absolute;
   padding: 20px;
   width: 260px;
+  transition: none;
 }
 
 .block.loaded {
   opacity: 1;
   transform: translateY(0);
+  transition: opacity 0.6s ease-in, transform 0.6s ease-in;
 }
 
-.block.fade:hover {
+.block.loaded:hover {
   opacity: 0.6;
   transform: scale(1.015);
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
 }
 
 @media only screen and (max-width: 700px) {
