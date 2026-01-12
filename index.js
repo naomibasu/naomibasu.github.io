@@ -211,7 +211,7 @@ function load_about() {
   // statement
   var statement = content.appendChild(document.createElement('p'));
   statement.setAttribute('class', 'p1')
-  statement.innerHTML = "Naomi Basu’s work centers on the Vedic metaphor of Indra’s Net—an infinite web of jewels reflecting one another—illustrating how everything is interconnected. Beginning with a Tantric artifact, such as a cosmological diagram, she playfully weaves its iconography with 2000s-era digital motifs and personal memory. The result is often a vibrant composition that intersects multiple timeframes and cultures. Through this process, she traces how visual ideas echo across and link contexts separated by time and space.";
+  statement.innerHTML = "Naomi Basu’s work centers on the Vedic metaphor of Indra’s Net—an infinite web of jewels reflecting one another—illustrating how everything is interconnected. Using a Tantric artifact such as a cosmological diagram as a starting point, she playfully weaves its iconography with 2000s-era digital motifs and images from personal experience. Through this process, she traces how visual ideas recur across time and geography, binding seemingly disparate contexts together.";
 
   // cv
   var linkText = content.appendChild(document.createElement('p'));
