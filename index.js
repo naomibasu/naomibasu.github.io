@@ -206,12 +206,17 @@ function load_about() {
   title.innerHTML = "About";
   var bio = content.appendChild(document.createElement('p'));
   bio.setAttribute('class', 'p1');
-  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York-based artist working across painting, embroidery, and animation. Her practice is rooted in traditional Thangka techniques, developed over several years of study with Tibetan master painter Pema Rinzin. Her work has been exhibited at galleries including Kate Oh Gallery, Las Contemporary, and Visionary Projects, auctioned by See You Next Thursday, and featured in Hyperallergic. She also supports emerging artists through her curatorial collective, Immaterial Projects.";
+  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York-based artist working across painting, embroidery, and animation. Her practice is rooted in Thangka techniques, developed through years of apprenticeship with the Tibetan master painter Pema Rinzin, who trained in the Menri tradition. Her study involved examining and reproducing ancient drawings of Tantric deities using traditional methods of constructing symmetrical grids and crushing stone pigments for paint - all techniques she adapts to her contemporary painting practice.";
   
   // statement
   var statement = content.appendChild(document.createElement('p'));
   statement.setAttribute('class', 'p1')
-  statement.innerHTML = "Naomi Basu’s work centers on the Vedic metaphor of Indra’s Net—an infinite web of jewels reflecting one another—illustrating how everything is interconnected. Using a Tantric artifact such as a cosmological diagram as a starting point, she playfully weaves its iconography with 2000s-era digital motifs and images from personal experience. Through this process, she traces how visual ideas recur across time and geography, binding seemingly disparate contexts together.";
+  statement.innerHTML = "Her work is guided by the Vedic metaphor of Indra’s Net - an infinite web of jewels reflecting one another - exploring the interconnectedness of all things. She is particularly interested in bridging Tantric concepts with contemporary lived experiences, which can often feel disconnected. Using artifacts such as cosmological diagrams as starting points, she playfully intertwines their iconography with personal imagery. Through this process, she traces how visual ideas recur across time and geography, creating unity between seemingly unrelated worlds.";
+
+  // accolades
+  var statement = content.appendChild(document.createElement('p'));
+  statement.setAttribute('class', 'p1')
+  statement.innerHTML = "Naomi Basu’s work has been exhibited at galleries including Kate Oh Gallery, Las Contemporary, and Visionary Projects, auctioned by See You Next Thursday, and featured in Hyperallergic. She is also a founding member of the curatorial collective, Immaterial Projects."
 
   // cv
   var linkText = content.appendChild(document.createElement('p'));
