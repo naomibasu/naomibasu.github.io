@@ -211,7 +211,7 @@ function load_about() {
   // statement
   var statement = content.appendChild(document.createElement('p'));
   statement.setAttribute('class', 'p1')
-  statement.innerHTML = "Her work is guided by the Vedic metaphor of Indra’s Net - an infinite web of jewels reflecting one another - exploring the interconnectedness of all things. She is particularly interested in bridging Tantric concepts with contemporary lived experiences, which can often feel disconnected. Using artifacts such as cosmological diagrams as starting points, she playfully intertwines their iconography with personal imagery. Through this process, she traces how visual ideas recur across time and geography, creating unity between seemingly unrelated worlds.";
+  statement.innerHTML = "Her work is guided by the Vedic metaphor of Indra’s Net, an infinite web of jewels reflecting one another, exploring the interconnectedness of all things. She is particularly interested in bridging Tantric concepts with contemporary lived experiences, which can often feel disconnected. Using artifacts such as cosmological diagrams as starting points, she playfully intertwines their iconography with personal imagery. Through this process, she traces how visual ideas recur across time and geography, creating unity between seemingly unrelated worlds.";
 
   // accolades
   var statement = content.appendChild(document.createElement('p'));
