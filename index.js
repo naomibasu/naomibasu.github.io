@@ -160,7 +160,8 @@ function setupBlocks() {
   colWidth = $('.block').outerWidth();
   // colWidth = Math.floor(windowWidth/3);
   blocks = [];
-  colCount = Math.floor(windowWidth/(colWidth+margin*3));
+  var leftOffset = windowWidth * 0.15; // matches .block margin-left
+  colCount = Math.floor((windowWidth - leftOffset) / (colWidth + margin * 3));
   for(var i = 0; i < colCount; i++) {
     blocks.push(margin);
   }
@@ -169,10 +170,15 @@ function setupBlocks() {
 
 
 function positionBlocks() {
+  var totalGridWidth = colCount * colWidth + (colCount - 1) * margin;
+  var navWidth = windowWidth * 0.07;
+  var availableWidth = windowWidth - navWidth;
+  var gridStartX = navWidth + (availableWidth - totalGridWidth) / 2;
+
   $('.block').each(function(){
     var min = Array.min(blocks);
     var index = $.inArray(min, blocks);
-    var leftPos = margin+(index*(colWidth+margin));
+    var leftPos = gridStartX + index * (colWidth + margin);
     $(this).css({
       'left':leftPos+'px',
       'top':min+'px'
