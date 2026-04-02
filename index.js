@@ -6,6 +6,20 @@ const artDirectory = "images/full_size/";
 const thumbnailDirectory = "images/thumbnails/";
 var art_list = [
   {
+    filename: 'Naomi_Basu_TantricRecursion_2025.jpeg',
+    title: 'Tantric Recursion',
+    medium: 'Acrylic, pastel, and sumi ink on wood',
+    dimensions: '20 x 24 inches',
+    year: '2025'
+  },
+  {
+    filename: 'Naomi_Basu_BornInALakeOfTears_2024.jpeg',
+    title: 'Born in a Lake of Tears',
+    medium: 'Acrylic and recycled sari on unstretched canvas',
+    dimensions: '37.5 x 42 inches',
+    year: '2024'
+  },
+  {
     filename: 'Naomi_Basu_BhavacakraRemix_2024.jpeg',
     title: 'Bhavacakra Remix',
     medium: 'Acrylic, indigo, pastel, sumi ink, sequins, ash, gold leaf on canvas',
@@ -18,13 +32,6 @@ var art_list = [
     medium: 'Vinyl record',
     dimensions: 'https://www.youtube.com/watch?v=0Q4LIiA_eFg',
     year: '2024'
-  },
-  {
-    filename: 'Naomi_Basu_TantricRecursion_2025.jpeg',
-    title: 'Tantric Recursion',
-    medium: 'Acrylic, pastel, and sumi ink on wood',
-    dimensions: '20 x 24 inches',
-    year: '2025'
   },
   {
     filename: 'Naomi_Basu_FlannelSoul_2024.jpeg',
@@ -48,13 +55,6 @@ var art_list = [
     year: '2024'
   },
   {
-    filename: 'Naomi_Basu_Vyagra_2024.jpeg',
-    title: 'Vyagra',
-    medium: 'Embroidery on recycled cotton, mounted on satin scroll',
-    dimensions: '12.5 x 22.5 inches',
-    year: '2024'
-  },
-  {
     filename: 'Naomi_Basu_Nayikows_2022.jpeg',
     title: 'Nayikows',
     medium: 'Embroidery on raw silk sari',
@@ -62,11 +62,11 @@ var art_list = [
     year: '2022'
   },
   {
-    filename: 'Naomi_Basu_BornInALakeOfTears_2022.jpeg',
-    title: 'Born in a Lake of Tears',
-    medium: 'Acrylic and recycled sari on unstretched canvas',
-    dimensions: '37.5 x 42 inches',
-    year: '2022'
+    filename: 'Naomi_Basu_Vyagra_2024.jpeg',
+    title: 'Vyagra',
+    medium: 'Embroidery on recycled cotton, mounted on satin scroll',
+    dimensions: '12.5 x 22.5 inches',
+    year: '2024'
   },
   {
     filename: 'Naomi_Basu_Milk_Bath_2023.jpeg',
@@ -74,6 +74,13 @@ var art_list = [
     medium: 'Oil and muslin on unstretched canvas',
     dimensions: '36 x 42 inches',
     year: '2023'
+  },
+  {
+    filename: 'Naomi_Basu_SkyDancer_2022.jpeg',
+    title: 'Sky Dancer',
+    medium: 'Acrylic on canvas',
+    dimensions: '28 x 28 inches',
+    year: '2022'
   },
   {
     filename: 'Naomi_Basu_Bushido_2023.jpeg',
@@ -123,13 +130,6 @@ var art_list = [
     medium: 'Acrylic and resin on wood',
     dimensions: '17 x 17 inches',
     year: '2021'
-  },
-  {
-    filename: 'Naomi_Basu_SkyDancer_2022.jpeg',
-    title: 'Sky Dancer',
-    medium: 'Acrylic on canvas',
-    dimensions: '28 x 28 inches',
-    year: '2022'
   },
 ];
 
@@ -223,6 +223,11 @@ function load_about() {
   var statement = content.appendChild(document.createElement('p'));
   statement.setAttribute('class', 'p1')
   statement.innerHTML = "Naomi Basu’s work has been exhibited at galleries including Kate Oh Gallery, Las Contemporary, and Visionary Projects, auctioned by See You Next Thursday, and featured in Hyperallergic. She is also a founding member of the curatorial collective, Immaterial Projects."
+
+  // contact
+  var contact = content.appendChild(document.createElement('p'));
+  contact.setAttribute('class', 'p1');
+  contact.innerHTML = "For inquiries, please email naomibasu at gmail dot com.";
 
   // cv
   var linkText = content.appendChild(document.createElement('p'));
