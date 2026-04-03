@@ -204,3 +204,63 @@ body.lb-disable-scrolling {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+
+/* Mobile - iPhone */
+@media only screen and (max-width: 480px) {
+  .lightbox {
+    position: fixed !important;
+    top: 50% !important;
+    left: 0 !important;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+
+  .lightboxOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+
+  .lightbox .lb-image {
+    border-width: 2px;
+  }
+
+  .lb-data .lb-caption {
+    font-size: 11px;
+    line-height: 1.3em;
+  }
+
+  .lb-data .lb-number {
+    font-size: 10px;
+  }
+
+  .lb-data .lb-close {
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+  }
+
+  .lb-nav a.lb-prev,
+  .lb-nav a.lb-next {
+    opacity: 0.6;
+  }
+}
+
+/* Tablet - iPad */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .lb-data .lb-caption {
+    font-size: 12px;
+    line-height: 1.2em;
+  }
+
+  .lb-data .lb-close {
+    width: 36px;
+    height: 36px;
+    background-size: contain;
+  }
+
+  .lb-nav a.lb-prev,
+  .lb-nav a.lb-next {
+    opacity: 0.5;
+  }
+}

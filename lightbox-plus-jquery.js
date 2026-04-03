@@ -11036,13 +11036,13 @@ return jQuery;
   // http://lokeshdhakar.com/projects/lightbox2/index.html#options
   Lightbox.defaults = {
     albumLabel: 'Image %1 of %2',
-    alwaysShowNavOnTouchDevices: false,
+    alwaysShowNavOnTouchDevices: true,
     fadeDuration: 600,
     fitImagesInViewport: true,
     imageFadeDuration: 600,
     // maxWidth: 800,
     // maxHeight: 600,
-    positionFromTop: 50,
+    positionFromTop: 30,
     resizeDuration: 700,
     showImageNumberLabel: true,
     wrapAround: false,
@@ -11219,7 +11219,8 @@ return jQuery;
       self.album.push({
         alt: $link.attr('data-alt'),
         link: $link.attr('href'),
-        title: $link.attr('data-title') || $link.attr('title')
+        title: $link.attr('data-title') || $link.attr('title'),
+        slug: $link.attr('data-slug')
       });
     }
 
@@ -11311,8 +11312,10 @@ return jQuery;
 
       // Calculate the max image dimensions for the current viewport.
       // Take into account the border around the image and an additional 10px gutter on each side.
-      maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 20;
-      maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - 70;
+      // Reserve less space for caption on mobile since text is smaller.
+      var captionAllowance = windowWidth <= 480 ? 90 : 110;
+      maxImageWidth  = windowWidth - self.containerPadding.left - self.containerPadding.right - self.imageBorderWidth.left - self.imageBorderWidth.right - 10;
+      maxImageHeight = windowHeight - self.containerPadding.top - self.containerPadding.bottom - self.imageBorderWidth.top - self.imageBorderWidth.bottom - self.options.positionFromTop - captionAllowance;
 
       /*
       Since many SVGs have small intrinsic dimensions, but they support scaling
@@ -11371,6 +11374,11 @@ return jQuery;
     // Preload image before showing
     preloader.src = this.album[imageNumber].link;
     this.currentImageIndex = imageNumber;
+
+    // Update URL hash to match current image
+    if (this.album[imageNumber].slug) {
+      window.location.hash = this.album[imageNumber].slug;
+    }
   };
 
   // Stretch overlay to fit the viewport
