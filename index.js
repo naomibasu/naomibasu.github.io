@@ -4,6 +4,10 @@ var pageTitle = document.head.getElementsByTagName('title');
 // Create image links
 const artDirectory = "images/full_size/";
 const thumbnailDirectory = "images/thumbnails/";
+
+function toSlug(title) {
+  return title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
 var art_list = [
   {
     filename: 'Naomi_Basu_TantricRecursion_2025.jpeg',
@@ -300,15 +304,21 @@ function load_art() {
   clearElement('content');
 
   for (const a of art_list) {
+    const slug = toSlug(a.title);
     const link = document.getElementById('content').appendChild(document.createElement('a'));
     link.setAttribute('href', artDirectory + a.filename);
     link.setAttribute('data-lightbox', "thismakesitwork");
+    link.setAttribute('data-slug', slug);
     link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions ?? "N/A"}<br>${a.year}`);
+
+    link.addEventListener('click', function () {
+      window.location.hash = slug;
+    });
 
     const figure = link.appendChild(document.createElement('figure'));
     const image = figure.appendChild(document.createElement('img'));
     image.setAttribute('class', 'block fade');
-    image.setAttribute('alt', a.title); // fallback for alt
+    image.setAttribute('alt', a.title);
     image.setAttribute('src', thumbnailDirectory + a.filename);
     image.setAttribute('loading', 'lazy');
   }
@@ -321,8 +331,22 @@ function load_art() {
     blocks.forEach((el, index) => {
       setTimeout(() => {
         el.classList.add('loaded');
-      }, index * 100); // delay each by 100ms
+      }, index * 100);
     });
+
+    // If URL has a hash, auto-open the matching artwork
+    var hash = window.location.hash.substring(1);
+    if (hash) {
+      var target = document.querySelector('a[data-slug="' + hash + '"]');
+      if (target) {
+        target.click();
+      }
+    }
+  });
+
+  // Clear hash when lightbox is closed
+  $(document).on('click', '#lightbox, #lightbox .lb-close', function () {
+    history.replaceState(null, '', window.location.pathname);
   });
 }
 
