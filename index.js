@@ -212,12 +212,12 @@ function load_about() {
   title.innerHTML = "About";
   var bio = content.appendChild(document.createElement('p'));
   bio.setAttribute('class', 'p1');
-  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York-based artist working across painting, embroidery, and animation. Her practice is rooted in Thangka techniques, developed through years of apprenticeship with the Tibetan master painter Pema Rinzin, who trained in the Menri tradition. Her study involved examining and reproducing ancient drawings of Tantric deities using traditional methods of constructing symmetrical grids and crushing stone pigments for paint - all techniques she adapts to her contemporary painting practice.";
+  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York–based artist working across painting and embroidery. Her practice is rooted in thangka techniques, developed through years of apprenticeship with the Tibetan master painter Pema Rinzin of the Menri tradition. She uses tantric diagrams as generative frameworks to reimagine ancient Indo-Tibetan visual systems as contemporary mythology.";
   
   // statement
   var statement = content.appendChild(document.createElement('p'));
   statement.setAttribute('class', 'p1')
-  statement.innerHTML = "Her work is guided by the Vedic metaphor of Indra’s Net, an infinite web of jewels reflecting one another, exploring the interconnectedness of all things. She is particularly interested in bridging Tantric concepts with contemporary lived experiences, which can often feel disconnected. Using artifacts such as cosmological diagrams as starting points, she playfully intertwines their iconography with personal imagery. Through this process, she traces how visual ideas recur across time and geography, creating unity between seemingly unrelated worlds.";
+  statement.innerHTML = "Pressing against the formal structures of these diagrams, Naomi fragments, repeats, and distorts traditional iconography. Her training in the disciplined processes of constructing symmetrical grids and preparing mineral pigments makes possible her reworking of these systems. Through these transformations, she traces how visual ideas fracture, recur, and mutate across time and geography, while acting as a connective thread between distant contexts.\n";
 
   // accolades
   var statement = content.appendChild(document.createElement('p'));
