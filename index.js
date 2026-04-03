@@ -216,7 +216,7 @@ function load_about() {
   title.innerHTML = "About";
   var bio = content.appendChild(document.createElement('p'));
   bio.setAttribute('class', 'p1');
-  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York–based artist working across painting and embroidery. Her practice is rooted in thangka techniques, developed through years of apprenticeship with the Tibetan master painter Pema Rinzin of the Menri tradition. She uses tantric diagrams as generative frameworks to reimagine ancient Indo-Tibetan visual systems as contemporary mythology.";
+  bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York–based artist working across painting and embroidery. Her practice is rooted in thangka techniques, developed through years of apprenticeship with the Tibetan master painter Pema Rinzin of the Menri tradition. The tantric diagrams she studied provide a framework through which she develops contemporary mythologies.";
   
   // statement
   var statement = content.appendChild(document.createElement('p'));
