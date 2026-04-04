@@ -52,18 +52,18 @@ var art_list = [
     year: '2024'
   },
   {
-    filename: 'Naomi_Basu_TheDairy_2024.jpeg',
-    title: 'The Dairy',
-    medium: 'Silk embroidery and image transfer on muslin',
-    dimensions: '14 x 18 inches',
-    year: '2024'
-  },
-  {
     filename: 'Naomi_Basu_Nayikows_2022.jpeg',
     title: 'Nayikows',
     medium: 'Embroidery on raw silk sari',
     dimensions: '9 x 26 inches',
     year: '2022'
+  },
+  {
+    filename: 'Naomi_Basu_TheDairy_2024.jpeg',
+    title: 'The Dairy',
+    medium: 'Silk embroidery and image transfer on muslin',
+    dimensions: '14 x 18 inches',
+    year: '2024'
   },
   {
     filename: 'Naomi_Basu_Vyagra_2024.jpeg',
