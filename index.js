@@ -469,7 +469,7 @@ function load_thangka() {
 
     const figure = link.appendChild(document.createElement("figure"));
     const image = figure.appendChild(document.createElement("img"));
-    image.setAttribute("class", "block fade");
+    image.setAttribute("class", "block fade thangka-block");
     image.setAttribute("alt", a.title);
     image.setAttribute("src", thangkaThumbnailDirectory + a.filename);
     image.setAttribute("loading", "lazy");
