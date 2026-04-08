@@ -44,8 +44,8 @@ nav img {
   height: auto;
 }
 
-#tech {
-  margin-left: 8px;
+#thangka img {
+  width: 75px;
 }
 
 a {
@@ -93,6 +93,20 @@ h1.fade-in {
 .p1.fade-in {
   opacity: 1;
   transform: translateY(0);
+}
+
+.bio {
+  margin-top: 2% !important;
+  margin-bottom: 2% !important;
+}
+
+.bio:first-of-type {
+  margin-top: 3% !important;
+}
+
+.about-tech {
+  margin-top: 5% !important;
+  font-size: 13px;
 }
 
 .block {
@@ -150,8 +164,8 @@ h1.fade-in {
     max-width: 45px;
   }
 
-  #tech {
-    margin-left: 0;
+  #thangka img {
+    width: 26px;
   }
 }
 

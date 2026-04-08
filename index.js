@@ -215,43 +215,62 @@ function load_about() {
   var title = content.appendChild(document.createElement('h1'));
   title.innerHTML = "About";
   var bio = content.appendChild(document.createElement('p'));
-  bio.setAttribute('class', 'p1');
+  bio.setAttribute('class', 'p1 bio');
   bio.innerHTML = "Naomi Basu (b. New Delhi) is a New York–based artist working across painting and embroidery. Her practice is rooted in thangka techniques, developed through years of apprenticeship with the Tibetan master painter Pema Rinzin of the Menri tradition. The tantric diagrams she studied provide a framework through which she develops contemporary mythologies.";
   
   // statement
   var statement = content.appendChild(document.createElement('p'));
-  statement.setAttribute('class', 'p1')
+  statement.setAttribute('class', 'p1 bio')
   statement.innerHTML = "Pressing against the formal structures of these diagrams, Naomi fragments, repeats, and distorts traditional iconography. Her training in the disciplined processes of constructing symmetrical grids and preparing mineral pigments makes possible her reworking of these systems. Through these transformations, she traces how visual ideas fracture, recur, and mutate across time and geography, while acting as a connective thread between distant contexts.\n";
 
   // accolades
   var statement = content.appendChild(document.createElement('p'));
-  statement.setAttribute('class', 'p1')
+  statement.setAttribute('class', 'p1 bio')
   statement.innerHTML = "Naomi Basu’s work has been exhibited at galleries including Kate Oh Gallery, Las Contemporary, and Visionary Projects, auctioned by See You Next Thursday, and featured in Hyperallergic. She is also a founding member of the curatorial collective, Immaterial Projects."
 
   // contact
   var contact = content.appendChild(document.createElement('p'));
   contact.setAttribute('class', 'p1');
-  contact.innerHTML = "For inquiries, please email naomibasu at gmail dot com.";
+  contact.innerHTML = "For inquiries, please email <em>naomibasu at gmail dot com</em>.";
 
-  // cv
-  var linkText = content.appendChild(document.createElement('p'));
-  linkText.setAttribute('class', 'p1');
-  var cvLink = linkText.appendChild(document.createElement('a'));
+  // art links (CV, Mailing List, Instagram) on one line
+  var artLinks = content.appendChild(document.createElement('p'));
+  artLinks.setAttribute('class', 'p1');
+
+  var cvLink = artLinks.appendChild(document.createElement('a'));
   cvLink.setAttribute('target', '_blank');
   cvLink.innerHTML = "Artist CV";
   cvLink.setAttribute('href', 'naomi-basu-artist-cv.pdf');
   cvLink.setAttribute('style', 'text-decoration:underline');
   cvLink.setAttribute('class', 'fade');
 
-  // newsletter subscribe
-  var newsletterText = content.appendChild(document.createElement('p'));
-  newsletterText.setAttribute('class', 'p1');
-  var newsletterLink = newsletterText.appendChild(document.createElement('a'));
+  artLinks.appendChild(document.createTextNode("  \u00B7  "));
+
+  var newsletterLink = artLinks.appendChild(document.createElement('a'));
   newsletterLink.setAttribute('target', '_blank');
   newsletterLink.innerHTML = "Mailing List";
   newsletterLink.setAttribute('href', 'https://naomibasu.substack.com/subscribe?utm_source=substack&utm_medium=web&utm_content=embedded-post');
   newsletterLink.setAttribute('style', 'text-decoration:underline');
   newsletterLink.setAttribute('class', 'fade');
+
+  artLinks.appendChild(document.createTextNode("  \u00B7  "));
+
+  var igLink = artLinks.appendChild(document.createElement('a'));
+  igLink.setAttribute('target', '_blank');
+  igLink.innerHTML = "Instagram";
+  igLink.setAttribute('href', 'https://www.instagram.com/naomi.basu/');
+  igLink.setAttribute('style', 'text-decoration:underline');
+  igLink.setAttribute('class', 'fade');
+
+  // tech projects
+  var techText = content.appendChild(document.createElement('p'));
+  techText.setAttribute('class', 'p1 about-tech');
+  techText.appendChild(document.createTextNode("I also work as an engineer \u2014 "));
+  var techLink = techText.appendChild(document.createElement('a'));
+  techLink.innerHTML = "see selected projects.";
+  techLink.setAttribute('style', 'text-decoration:underline; cursor:pointer');
+  techLink.setAttribute('class', 'fade');
+  techLink.addEventListener('click', function() { setPage('Tech'); });
 
   // Fade in all .p1 and h1 elements after a short delay
   setTimeout(() => {
@@ -352,6 +371,78 @@ function load_art() {
 
 
 
+// Thangka art list — populate with traditional thangka works
+var thangka_list = [
+];
+
+function load_thangka() {
+  if (pageTitle == "Thangka") {
+    return;
+  }
+  clearElement('content');
+
+  if (thangka_list.length === 0) {
+    var content = document.getElementById('content');
+    var title = content.appendChild(document.createElement('h1'));
+    title.innerHTML = "Thangka";
+    var msg = content.appendChild(document.createElement('p'));
+    msg.setAttribute('class', 'p1');
+    msg.innerHTML = "Coming soon.";
+    setTimeout(() => {
+      document.querySelectorAll('.p1, h1').forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('fade-in');
+        }, index * 100);
+      });
+    }, 50);
+    return;
+  }
+
+  for (const a of thangka_list) {
+    const slug = toSlug(a.title);
+    const link = document.getElementById('content').appendChild(document.createElement('a'));
+    link.setAttribute('href', artDirectory + a.filename);
+    link.setAttribute('data-lightbox', "thismakesitwork");
+    link.setAttribute('data-slug', slug);
+    link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions ?? "N/A"}<br>${a.year}`);
+
+    link.addEventListener('click', function () {
+      window.location.hash = slug;
+    });
+
+    const figure = link.appendChild(document.createElement('figure'));
+    const image = figure.appendChild(document.createElement('img'));
+    image.setAttribute('class', 'block fade');
+    image.setAttribute('alt', a.title);
+    image.setAttribute('src', thumbnailDirectory + a.filename);
+    image.setAttribute('loading', 'lazy');
+  }
+
+  imagesLoaded('#content', { background: false }, function () {
+    setupBlocks();
+
+    const blocks = document.querySelectorAll('.block');
+    blocks.forEach((el, index) => {
+      setTimeout(() => {
+        el.classList.add('loaded');
+      }, index * 100);
+    });
+
+    var hash = window.location.hash.substring(1);
+    if (hash) {
+      var target = document.querySelector('a[data-slug="' + hash + '"]');
+      if (target) {
+        target.click();
+      }
+    }
+  });
+
+  $(document).on('click', '#lightbox, #lightbox .lb-close', function () {
+    history.replaceState(null, '', window.location.pathname);
+  });
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const requestedPage = window.localStorage.getItem("requestedPage");
 
@@ -359,6 +450,8 @@ document.addEventListener("DOMContentLoaded", function () {
     load_about();
   } else if (requestedPage === "Tech") {
     load_tech();
+  } else if (requestedPage === "Thangka") {
+    load_thangka();
   } else {
     load_art();
   }
