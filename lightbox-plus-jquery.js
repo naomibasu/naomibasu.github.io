@@ -11591,8 +11591,8 @@
     this.disableKeyboardNav();
 
     // Clean up zoom lens from previous image
-    this.$lightbox.find(".lb-container").off(".zoom");
-    this.$lightbox.find(".lb-zoom-lens").remove();
+    this.$lightbox.find(".lb-container").off(".zoom").css("cursor", "");
+    this.$outerContainer.find(".lb-zoom-lens").remove();
 
     // Show loading state
     this.$overlay.fadeIn(this.options.fadeDuration);
@@ -11805,17 +11805,23 @@
   Lightbox.prototype.initZoomLens = function () {
     var self = this;
     var $image = this.$lightbox.find(".lb-image");
+    var $outer = this.$outerContainer;
     var $container = this.$lightbox.find(".lb-container");
 
     // Remove any existing lens
-    $container.find(".lb-zoom-lens").remove();
+    $outer.find(".lb-zoom-lens").remove();
+    $container.off(".zoom").css("cursor", "");
 
     // Skip on touch devices
     var isTouch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
     if (isTouch) return;
 
-    var lensSize = 350;
-    var zoomLevel = 0.2;
+    // Skip for GIFs
+    var src = $image.attr("src") || "";
+    if (src.toLowerCase().match(/\.gif(\?|$)/i)) return;
+
+    var lensSize = 310;
+    var zoomLevel = 0.35;
 
     var $lens = $('<div class="lb-zoom-lens"></div>');
     $lens.css({
@@ -11831,9 +11837,9 @@
       zIndex: 9999,
       pointerEvents: "none",
     });
-    $container.css("position", "relative").append($lens);
+    $outer.append($lens);
 
-    var fullSrc = $image.attr("src");
+    var fullSrc = src;
 
     $container.css("cursor", "crosshair");
 
@@ -11857,9 +11863,9 @@
         return;
       }
 
-      var containerOffset = $container.offset();
-      var lensLeft = e.pageX - containerOffset.left - lensSize / 2;
-      var lensTop = e.pageY - containerOffset.top - lensSize / 2;
+      var outerOffset = $outer.offset();
+      var lensLeft = e.pageX - outerOffset.left - lensSize / 2;
+      var lensTop = e.pageY - outerOffset.top - lensSize / 2;
 
       var natW = $image[0].naturalWidth;
       var natH = $image[0].naturalHeight;
