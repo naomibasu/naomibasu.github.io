@@ -147,8 +147,12 @@ var project_dict = {
 };
 
 function setPage(title) {
-  window.localStorage.setItem("requestedPage", title);
-  window.location.href = "index.html";
+  var hash = title.toLowerCase();
+  if (window.location.hash.substring(1) === hash) {
+    loadPage();
+  } else {
+    window.location.hash = hash;
+  }
 }
 
 // BLOCK COLUMN SETUP
@@ -331,7 +335,7 @@ function load_art() {
     link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions ?? "N/A"}<br>${a.year}`);
 
     link.addEventListener('click', function () {
-      window.location.hash = slug;
+      history.replaceState(null, '', '#' + slug);
     });
 
     const figure = link.appendChild(document.createElement('figure'));
@@ -342,7 +346,6 @@ function load_art() {
     image.setAttribute('loading', 'lazy');
   }
 
-  // Wait for all images to load
   imagesLoaded('#content', { background: false }, function () {
     setupBlocks();
 
@@ -353,7 +356,6 @@ function load_art() {
       }, index * 100);
     });
 
-    // If URL has a hash, auto-open the matching artwork
     var hash = window.location.hash.substring(1);
     if (hash) {
       var target = document.querySelector('a[data-slug="' + hash + '"]');
@@ -363,7 +365,6 @@ function load_art() {
     }
   });
 
-  // Clear hash when lightbox is closed
   $(document).on('click', '#lightbox, #lightbox .lb-close', function () {
     history.replaceState(null, '', window.location.pathname);
   });
@@ -407,7 +408,7 @@ function load_thangka() {
     link.setAttribute('data-title', `${a.title}<br>${a.medium}<br>${a.dimensions ?? "N/A"}<br>${a.year}`);
 
     link.addEventListener('click', function () {
-      window.location.hash = slug;
+      history.replaceState(null, '', '#thangka/' + slug);
     });
 
     const figure = link.appendChild(document.createElement('figure'));
@@ -429,8 +430,9 @@ function load_thangka() {
     });
 
     var hash = window.location.hash.substring(1);
-    if (hash) {
-      var target = document.querySelector('a[data-slug="' + hash + '"]');
+    var thangkaSlug = hash.startsWith('thangka/') ? hash.substring(8) : '';
+    if (thangkaSlug) {
+      var target = document.querySelector('a[data-slug="' + thangkaSlug + '"]');
       if (target) {
         target.click();
       }
@@ -438,25 +440,41 @@ function load_thangka() {
   });
 
   $(document).on('click', '#lightbox, #lightbox .lb-close', function () {
-    history.replaceState(null, '', window.location.pathname);
+    history.replaceState(null, '', '#thangka');
   });
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  const requestedPage = window.localStorage.getItem("requestedPage");
+var currentPage = null;
 
-  if (requestedPage === "About") {
-    load_about();
-  } else if (requestedPage === "Tech") {
-    load_tech();
-  } else if (requestedPage === "Thangka") {
-    load_thangka();
-  } else {
-    load_art();
+function loadPage() {
+  var hash = window.location.hash.substring(1);
+  var page, slug;
+
+  if (hash === 'about') { page = 'about'; slug = ''; }
+  else if (hash === 'tech') { page = 'tech'; slug = ''; }
+  else if (hash === 'thangka') { page = 'thangka'; slug = ''; }
+  else if (hash.startsWith('thangka/')) { page = 'thangka'; slug = hash.substring(8); }
+  else { page = 'art'; slug = hash; }
+
+  if (page === currentPage && slug) {
+    var target = document.querySelector('a[data-slug="' + slug + '"]');
+    if (target) target.click();
+    return;
   }
 
-  window.localStorage.setItem("requestedPage", "");
+  currentPage = page;
+  clearElement('content');
 
+  if (page === 'about') { load_about(); }
+  else if (page === 'tech') { load_tech(); }
+  else if (page === 'thangka') { load_thangka(); }
+  else { load_art(); }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  loadPage();
   $(window).resize(setupBlocks);
 });
+
+window.addEventListener('hashchange', loadPage);

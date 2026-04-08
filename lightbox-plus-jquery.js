@@ -11375,9 +11375,9 @@ return jQuery;
     preloader.src = this.album[imageNumber].link;
     this.currentImageIndex = imageNumber;
 
-    // Update URL hash to match current image
+    // Update URL hash to match current image (replaceState to avoid triggering hashchange)
     if (this.album[imageNumber].slug) {
-      window.location.hash = this.album[imageNumber].slug;
+      history.replaceState(null, '', '#' + this.album[imageNumber].slug);
     }
   };
 
