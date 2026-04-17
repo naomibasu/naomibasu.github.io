@@ -398,18 +398,11 @@ const thangkaThumbnailDirectory = "images/thumbnails/thangka/";
 
 var thangka_list = [
   {
-    filename: "Naomi_Basu_Buddha1_2022.jpeg",
-    title: "Shakyamuni Buddha (1)",
-    medium: "Graphite on paper",
-    dimensions: "11 x 14 inches",
-    year: "2022",
-  },
-  {
-    filename: "Naomi_Basu_BuddhaSumi_2022.jpeg",
-    title: "Shakyamuni Buddha (2)",
-    medium: "Graphite and sumi ink on paper",
-    dimensions: "11 x 14 inches",
-    year: "2022",
+    filename: "Naomi_Basu_Kalachakra_2026.jpeg",
+    title: "Kalachakra",
+    medium: "Sumi ink and graphite on wood",
+    dimensions: "16 x 20 inches",
+    year: "2026",
   },
   {
     filename: "Naomi_Basu_WheelOfLife_2023.jpeg",
@@ -424,6 +417,20 @@ var thangka_list = [
     medium: "Graphite and sumi ink on bristol paper",
     dimensions: "14 x 17 inches",
     year: "2023",
+  },
+  {
+    filename: "Naomi_Basu_Buddha1_2022.jpeg",
+    title: "Shakyamuni Buddha (1)",
+    medium: "Graphite on paper",
+    dimensions: "11 x 14 inches",
+    year: "2022",
+  },
+  {
+    filename: "Naomi_Basu_BuddhaSumi_2022.jpeg",
+    title: "Shakyamuni Buddha (2)",
+    medium: "Graphite and sumi ink on paper",
+    dimensions: "11 x 14 inches",
+    year: "2022",
   },
 ];
 
