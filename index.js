@@ -405,6 +405,13 @@ var thangka_list = [
     year: "2026",
   },
   {
+    filename: "Naomi_Basu_VajrabhairavaDetail_2026.jpeg",
+    title: "Vajrabhairava (Detail)",
+    medium: "Graphite on wood",
+    dimensions: "16 x 20 inches",
+    year: "2026",
+  },
+  {
     filename: "Naomi_Basu_Kalachakra_2026.jpeg",
     title: "Kalachakra",
     medium: "Sumi ink and graphite on wood",
@@ -426,15 +433,8 @@ var thangka_list = [
     year: "2023",
   },
   {
-    filename: "Naomi_Basu_Buddha1_2022.jpeg",
-    title: "Shakyamuni Buddha (1)",
-    medium: "Graphite on paper",
-    dimensions: "11 x 14 inches",
-    year: "2022",
-  },
-  {
     filename: "Naomi_Basu_BuddhaSumi_2022.jpeg",
-    title: "Shakyamuni Buddha (2)",
+    title: "Shakyamuni Buddha",
     medium: "Graphite and sumi ink on paper",
     dimensions: "11 x 14 inches",
     year: "2022",
