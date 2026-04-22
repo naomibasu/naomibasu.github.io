@@ -482,8 +482,9 @@ function load_thangka() {
     });
 
     const figure = link.appendChild(document.createElement("figure"));
+    figure.setAttribute("class", "block fade thangka-wrapper");
     const image = figure.appendChild(document.createElement("img"));
-    image.setAttribute("class", "block fade thangka-block");
+    image.setAttribute("class", "thangka-block");
     image.setAttribute("alt", a.title);
     image.setAttribute("src", thangkaThumbnailDirectory + a.filename);
     image.setAttribute("loading", "lazy");
@@ -545,6 +546,7 @@ function loadPage() {
 
   currentPage = page;
   clearElement("content");
+  document.getElementById("content").classList.toggle("about-active", page === "about");
 
   if (page === "about") {
     load_about();

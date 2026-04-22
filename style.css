@@ -11,6 +11,11 @@ body {
   color: #6b6b6b;
 }
 
+#content.about-active {
+  padding-top: max(5vh, calc(50vh - 320px));
+  padding-left: 6%;
+}
+
 ul, nav ul {
   list-style: none;
   padding: 0;
@@ -34,7 +39,7 @@ nav li {
 
 #logoicon {
   width: 100%;
-  max-width: 120px;
+  max-width: 105px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -42,10 +47,12 @@ nav li {
 
 nav img {
   height: auto;
+  max-width: 45px;
 }
 
 #thangka img {
-  width: 75px;
+  width: 65px;
+  max-width: none;
 }
 
 a {
@@ -78,6 +85,10 @@ h1.fade-in {
   transform: translateY(0);
 }
 
+.about-active h1 {
+  margin-top: 0;
+}
+
 .p1 {
   margin: 3% auto;
   width: 60%;
@@ -104,14 +115,14 @@ h1.fade-in {
   margin-top: 3% !important;
 }
 
-.thangka-block {
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-  padding: 0 !important;
-  display: block;
+.thangka-wrapper {
+  margin: 0;
 }
 
-.thangka-block figure {
-  margin: 0;
+.thangka-block {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  display: block;
+  width: 100%;
 }
 
 .about-tech {
@@ -167,15 +178,15 @@ h1.fade-in {
   }
 
   nav img {
-    width: 20px;
+    width: 16px;
   }
 
   #logoicon {
-    max-width: 45px;
+    max-width: 35px;
   }
 
   #thangka img {
-    width: 26px;
+    width: 20px;
   }
 }
 
