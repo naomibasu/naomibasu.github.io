@@ -11832,6 +11832,7 @@
       boxShadow: "0 2px 10px rgba(0,0,0,0.3)",
       borderRadius: "4px",
       backgroundRepeat: "no-repeat",
+      backgroundImage: "url(" + src + ")",
       cursor: "crosshair",
       display: "none",
       zIndex: 9999,
@@ -11844,10 +11845,7 @@
     $container.css("cursor", "crosshair");
 
     $container.on("mouseenter.zoom", function () {
-      $lens.css({
-        backgroundImage: "url(" + fullSrc + ")",
-        display: "block",
-      });
+      $lens.show();
     });
 
     $container.on("mousemove.zoom", function (e) {
