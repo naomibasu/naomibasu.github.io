@@ -398,6 +398,13 @@ const thangkaThumbnailDirectory = "images/thumbnails/thangka/";
 
 var thangka_list = [
   {
+    filename: "Naomi_Basu_VajrabhairavaSumiDetail_2026.jpeg",
+    title: "Vajrabhairava in Sumi Ink(Detail)",
+    medium: "Sumi ink and graphite on wood",
+    dimensions: "16 x 20 inches",
+    year: "2026",
+  },
+  {
     filename: "Naomi_Basu_Vajrabhairava_2026.jpeg",
     title: "Vajrabhairava",
     medium: "Graphite on wood",
