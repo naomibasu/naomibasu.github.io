@@ -12,8 +12,8 @@ body {
 }
 
 #content.about-active {
-  padding-top: max(5vh, calc(50vh - 320px));
-  padding-left: 6%;
+  padding-top: max(6vh, calc(50vh - 350px));
+  padding-left: 5%;
 }
 
 ul, nav ul {
