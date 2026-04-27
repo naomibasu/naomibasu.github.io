@@ -234,7 +234,7 @@ function load_about() {
   var statement = content.appendChild(document.createElement("p"));
   statement.setAttribute("class", "p1 bio");
   statement.innerHTML =
-    "Naomi's iconometric training enables her to press against the formal structures of these diagrams, which she fragments, distorts, and interjects with modern visual logic. Through these transformations, she examines how religious iconography must adapt to remain relevant within contemporary life, and what is lost, altered, or contested in that process.\n";
+    "Naomi's iconometric training enables her to press against the formal structures of these diagrams, which she fragments, distorts, and interjects with modern spatial logic. Through these transformations, she examines how religious iconography must adapt to remain relevant within contemporary life, and what is lost, altered, or contested in that process.\n";
 
   // accolades
   var statement = content.appendChild(document.createElement("p"));
