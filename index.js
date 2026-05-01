@@ -13,13 +13,6 @@ function toSlug(title) {
 }
 var art_list = [
   {
-    filename: "Naomi_Basu_TantricRecursion_2025.jpeg",
-    title: "Tantric Recursion",
-    medium: "Acrylic, pastel, and sumi ink on wood",
-    dimensions: "24 x 20 inches",
-    year: "2025",
-  },
-  {
     filename: "Naomi_Basu_PlaneAndProjectionInYabYum_2026.jpeg",
     title: "Plane and Projection in Yab-Yum",
     medium: "Sumi ink, mineral pigments, and gold leaf on wood",
@@ -34,6 +27,13 @@ var art_list = [
     year: "2026",
   },
   {
+    filename: "Naomi_Basu_TantricRecursion_2025.jpeg",
+    title: "Tantric Recursion",
+    medium: "Acrylic, pastel, and sumi ink on wood",
+    dimensions: "24 x 20 inches",
+    year: "2025",
+  },
+  {
     filename: "Naomi_Basu_SmokeAshRelease_2026.jpeg",
     title: "Smoke, Ash, Release",
     medium: "Acrylic, sumi ink, pastel, and ash on wood",
@@ -46,6 +46,13 @@ var art_list = [
     medium: "Acrylic and recycled sari on unstretched canvas",
     dimensions: "42 x 38 inches",
     year: "2024",
+  },
+  {
+    filename: "Naomi_Basu_Milk_Bath_2023.jpeg",
+    title: "Milk Bath",
+    medium: "Oil and muslin on unstretched canvas",
+    dimensions: "42 x 36 inches",
+    year: "2023",
   },
   {
     filename: "Naomi_Basu_BhavacakraRemix_2024.jpeg",
@@ -98,13 +105,6 @@ var art_list = [
     medium: "Embroidery on recycled cotton, mounted on satin scroll",
     dimensions: "22.5 x 12.5 inches",
     year: "2024",
-  },
-  {
-    filename: "Naomi_Basu_Milk_Bath_2023.jpeg",
-    title: "Milk Bath",
-    medium: "Oil and muslin on unstretched canvas",
-    dimensions: "42 x 36 inches",
-    year: "2023",
   },
   {
     filename: "Naomi_Basu_SkyDancer_2022.jpeg",
@@ -207,16 +207,15 @@ function positionBlocks() {
   var availableWidth = windowWidth - navWidth;
   var gridStartX = navWidth + (availableWidth - totalGridWidth) / 2;
 
+  var colIndex = 0;
   $(".block").each(function () {
-    var min = Array.min(blocks);
-    var index = $.inArray(min, blocks);
-    var leftPos = gridStartX + index * (colWidth + margin);
+    var leftPos = gridStartX + colIndex * (colWidth + margin);
     $(this).css({
       left: leftPos + "px",
-      top: min + "px",
+      top: blocks[colIndex] + "px",
     });
-    // blocks[index] = min+$(this).outerHeight()+margin;
-    blocks[index] = min + $(this).outerHeight(true) + margin;
+    blocks[colIndex] = blocks[colIndex] + $(this).outerHeight(true) + margin;
+    colIndex = (colIndex + 1) % colCount;
   });
 }
 
