@@ -16,14 +16,35 @@ var art_list = [
     filename: "Naomi_Basu_TantricRecursion_2025.jpeg",
     title: "Tantric Recursion",
     medium: "Acrylic, pastel, and sumi ink on wood",
-    dimensions: "20 x 24 inches",
+    dimensions: "24 x 20 inches",
     year: "2025",
+  },
+  {
+    filename: "Naomi_Basu_PlaneAndProjectionInYabYum_2026.jpeg",
+    title: "Plane and Projection in Yab-Yum",
+    medium: "Sumi ink, mineral pigments, and gold leaf on wood",
+    dimensions: "20 x 16 inches",
+    year: "2026",
+  },
+  {
+    filename: "Naomi_Basu_PlaneAndDepthInYabYum_2026.jpeg",
+    title: "Plane and Depth in Yab-Yum",
+    medium: "Sumi ink, mineral pigments, and pastel on wood",
+    dimensions: "20 x 16 inches",
+    year: "2026",
+  },
+  {
+    filename: "Naomi_Basu_SmokeAshRelease_2026.jpeg",
+    title: "Smoke, Ash, Release",
+    medium: "Acrylic, sumi ink, pastel, and ash on wood",
+    dimensions: "20 x 16 inches",
+    year: "2026",
   },
   {
     filename: "Naomi_Basu_BornInALakeOfTears_2024.jpeg",
     title: "Born in a Lake of Tears",
     medium: "Acrylic and recycled sari on unstretched canvas",
-    dimensions: "37.5 x 42 inches",
+    dimensions: "42 x 38 inches",
     year: "2024",
   },
   {
@@ -31,7 +52,7 @@ var art_list = [
     title: "Bhavacakra Remix",
     medium:
       "Acrylic, indigo, pastel, sumi ink, sequins, ash, gold leaf on canvas",
-    dimensions: "30 x 40 inches",
+    dimensions: "40 x 30 inches",
     year: "2024",
   },
   {
@@ -46,7 +67,7 @@ var art_list = [
     title: "Flannel Soul",
     medium:
       "Marker, pastel, indigo, embroidery, iridescent pigment, and silver leaf on tea-stained cotton",
-    dimensions: "11.7 x 16.5 inches (A3)",
+    dimensions: "16.5 x 11.7 inches (A3)",
     year: "2024",
   },
   {
@@ -54,35 +75,35 @@ var art_list = [
     title: "Kāmadhenu",
     medium:
       "Marker, sumi ink, color pencil, and soft pastel on tea-stained cotton",
-    dimensions: "11.7 x 16.5 inches (A3)",
+    dimensions: "16.5 x 11.7 inches (A3)",
     year: "2024",
   },
   {
     filename: "Naomi_Basu_Nayikows_2022.jpeg",
     title: "Nayikows",
     medium: "Embroidery on raw silk sari",
-    dimensions: "9 x 26 inches",
+    dimensions: "26 x 9 inches",
     year: "2022",
   },
   {
     filename: "Naomi_Basu_TheDairy_2024.jpeg",
     title: "The Dairy",
     medium: "Silk embroidery and image transfer on muslin",
-    dimensions: "14 x 18 inches",
+    dimensions: "18 x 14 inches",
     year: "2024",
   },
   {
     filename: "Naomi_Basu_Vyagra_2024.jpeg",
     title: "Vyagra",
     medium: "Embroidery on recycled cotton, mounted on satin scroll",
-    dimensions: "12.5 x 22.5 inches",
+    dimensions: "22.5 x 12.5 inches",
     year: "2024",
   },
   {
     filename: "Naomi_Basu_Milk_Bath_2023.jpeg",
     title: "Milk Bath",
     medium: "Oil and muslin on unstretched canvas",
-    dimensions: "36 x 42 inches",
+    dimensions: "42 x 36 inches",
     year: "2023",
   },
   {
@@ -111,13 +132,6 @@ var art_list = [
     title: "Metamorphose",
     medium: "Acrylic, ground indigo, and resin on wood",
     dimensions: "28 x 28 inches",
-    year: "2023",
-  },
-  {
-    filename: "Naomi_Basu_VapeNation_2023.jpeg",
-    title: "VapeNation",
-    medium: "Acrylic, mineral pigments, and resin on wood",
-    dimensions: "11.5 x 11.5 inches",
     year: "2023",
   },
   {
