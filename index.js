@@ -37,7 +37,7 @@ var art_list = [
     filename: "Naomi_Basu_SmokeAshRelease_2026.jpeg",
     title: "Smoke, Ash, Release",
     medium: "Acrylic, sumi ink, pastel, and ash on wood",
-    dimensions: "20 x 16 inches",
+    dimensions: "24 x 20 inches",
     year: "2026",
   },
   {
