@@ -13,6 +13,13 @@ function toSlug(title) {
 }
 var art_list = [
   {
+    filename: "Naomi_Basu_PlasticShamanAmericanPsycho_2026.jpeg",
+    title: "Plastic Shaman/American Psycho",
+    medium: "Acrylic, gold leaf, color pencil, and rhinestones on wood",
+    dimensions: "24 x 20 inches",
+    year: "2026",
+  },
+  {
     filename: "Naomi_Basu_PlaneAndProjectionInYabYum_2026.jpeg",
     title: "Plane and Projection in Yab-Yum",
     medium: "Sumi ink, mineral pigments, and gold leaf on wood",
