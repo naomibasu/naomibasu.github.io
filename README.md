@@ -1,3 +1,3 @@
 # naomibasu.github.io
 
-Naomi Basu Personal Website
+Naomi Basu Artist Website

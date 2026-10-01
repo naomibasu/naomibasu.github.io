@@ -260,7 +260,7 @@ function load_about() {
   var statement = content.appendChild(document.createElement("p"));
   statement.setAttribute("class", "p1 bio");
   statement.innerHTML =
-    "Naomi Basu’s work has been exhibited at galleries including Morgan Lehman Gallery, GOCA by Garde, and Visionary Projects, and featured in Tricycle Magazine and Hyperallergic. She is also a founding member of the curatorial collective, Immaterial Projects.";
+    "Naomi Basu’s work has been exhibited at galleries including Morgan Lehman Gallery, GOCA by Garde, and Visionary Projects, and her first solo exhibition was at SPRING/BREAK Art Show, New York in 2026. Her work has been featured in Tricycle Magazine and Hyperallergic. She is also a founding member of the curatorial collective, Immaterial Projects.";
 
   // contact
   var contact = content.appendChild(document.createElement("p"));
