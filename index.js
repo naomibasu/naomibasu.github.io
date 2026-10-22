@@ -254,7 +254,7 @@ function load_about() {
   var statement = content.appendChild(document.createElement("p"));
   statement.setAttribute("class", "p1 bio");
   statement.innerHTML =
-    "Over time, the gap between inherited forms of sacred meaning and lived experience has widened. Naomi is concerned with art’s capacity to renegotiate this gap. Pressing against the iconometric structures of her training, she fragments, distorts, and interjects them with modern spatial logic. Through these transformations, she explores how religious iconography could evolve to restore connection to meanings that transcend the individual, and what is lost, altered, or contested in the process.\n";
+    "As modern life becomes more individualized, Naomi explores painting’s capacity to evoke spiritual awe: a connection to something beyond the self that does not depend on shared religious beliefs. She studies the different ways thangka and Western painting traditions produce awe and brings them into dialogue. In her work, thangka’s precise geometries, intricate detail, and mineral pigments meet modernist approaches to light, texture, and dissolving edges to create this experience for contemporary viewers.\n";
 
   // accolades
   var statement = content.appendChild(document.createElement("p"));
