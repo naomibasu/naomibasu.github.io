@@ -93,11 +93,11 @@ var art_list = [
     year: "2024",
   },
   {
-    filename: "Naomi_Basu_Nayikows_2022.jpeg",
+    filename: "Naomi_Basu_Nayikows_2023.jpeg",
     title: "Nayikows",
     medium: "Embroidery on raw silk sari",
     dimensions: "26 x 9 inches",
-    year: "2022",
+    year: "2023",
   },
   {
     filename: "Naomi_Basu_TheDairy_2024.jpeg",
@@ -201,7 +201,13 @@ function setupBlocks() {
   // colWidth = Math.floor(windowWidth/3);
   blocks = [];
   var leftOffset = windowWidth * 0.15; // matches .block margin-left
-  colCount = Math.floor((windowWidth - leftOffset) / (colWidth + margin * 3));
+  colCount = Math.max(
+    1,
+    Math.min(
+      3,
+      Math.floor((windowWidth - leftOffset) / (colWidth + margin * 3))
+    )
+  );
   for (var i = 0; i < colCount; i++) {
     blocks.push(margin);
   }
