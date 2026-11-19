@@ -247,10 +247,25 @@ function load_about() {
     return;
   }
 
-  // bio
+  // title
   var content = document.getElementById("content");
   var title = content.appendChild(document.createElement("h1"));
   title.innerHTML = "About";
+
+  // portrait
+  var portrait = content.appendChild(document.createElement("img"));
+  portrait.setAttribute("src", "images/portrait.jpg");
+  portrait.setAttribute("alt", "Naomi Basu, artist portrait");
+  portrait.setAttribute("class", "about-portrait");
+  portrait.setAttribute("loading", "eager");
+  portrait.setAttribute("decoding", "async");
+
+  // portrait credit
+  var portraitCredit = content.appendChild(document.createElement("p"));
+  portraitCredit.setAttribute("class", "portrait-credit");
+  portraitCredit.innerHTML = "Portrait by Albert Font";
+
+  // bio
   var bio = content.appendChild(document.createElement("p"));
   bio.setAttribute("class", "p1 bio");
   bio.innerHTML =
@@ -320,9 +335,9 @@ function load_about() {
     setPage("Tech");
   });
 
-  // Fade in all .p1 and h1 elements after a short delay
+  // Fade in all .p1, h1, and portrait elements after a short delay
   setTimeout(() => {
-    document.querySelectorAll(".p1, h1").forEach((el, index) => {
+    document.querySelectorAll(".p1, h1, .about-portrait, .portrait-credit").forEach((el, index) => {
       setTimeout(() => {
         el.classList.add("fade-in");
       }, index * 100); // stagger effect

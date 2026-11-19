@@ -89,6 +89,35 @@ h1.fade-in {
   margin-top: 0;
 }
 
+.about-portrait {
+  display: block;
+  width: 60%;
+  max-width: 800px;
+  height: auto;
+  margin: 60px auto 0;
+  object-fit: cover;
+}
+
+.portrait-credit {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin: 8px auto 3%;
+}
+
+.about-portrait,
+.portrait-credit {
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-portrait.fade-in,
+.portrait-credit.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .p1 {
   margin: 3% auto;
   width: 60%;
@@ -159,16 +188,16 @@ h1.fade-in {
 
   h1 {
     margin-top: 6vh;
-    font-size: 22px;
+    font-size: 12px;
   }
 
   .p1 {
     width: 260px;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   p {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   p img, #video {
@@ -187,6 +216,17 @@ h1.fade-in {
 
   #thangka img {
     width: 20px;
+  }
+
+  .about-portrait {
+    width: 260px;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+
+  .portrait-credit {
+    font-size: 8px;
+    margin: 8px auto 5%;
   }
 }
 
